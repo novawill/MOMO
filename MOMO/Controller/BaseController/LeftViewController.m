@@ -9,6 +9,7 @@
 #import "LeftViewController.h"
 #import "BaseViewController.h"
 #import "MusicViewController.h"
+#import "AlbumViewController.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -48,7 +49,7 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 1:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[[BaseViewController alloc] init]]
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[[AlbumViewController alloc] init]]
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;

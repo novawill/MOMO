@@ -117,6 +117,8 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     cell.model = model;
     
+    cell.userInteractionEnabled = NO;
+    
     return cell;
     
 }

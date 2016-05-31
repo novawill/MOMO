@@ -29,7 +29,8 @@
 		26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF129C1CFD73CF001E299A /* AlbumCell.m */; };
 		26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CF129D1CFD73CF001E299A /* AlbumCell.xib */; };
 		26CF12A61CFD957E001E299A /* fullPicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12A51CFD957E001E299A /* fullPicButton.m */; };
-		26CF12AB1CFDC15B001E299A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12AA1CFDC15B001E299A /* BaseModel.m */; };
+		26CF12AE1CFDD547001E299A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12AD1CFDD547001E299A /* BaseModel.m */; };
+		26CF12B31CFDE15C001E299A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF12B21CFDE15C001E299A /* Reveal.framework */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
 		26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6CB501CFA028F00DCC0DD /* RightViewController.m */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
@@ -94,10 +95,11 @@
 		26CF129B1CFD73CF001E299A /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
 		26CF129C1CFD73CF001E299A /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		26CF129D1CFD73CF001E299A /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
-		26CF12A41CFD957E001E299A /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullPicButton.h; path = ../fullPicButton.h; sourceTree = "<group>"; };
-		26CF12A51CFD957E001E299A /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullPicButton.m; path = ../fullPicButton.m; sourceTree = "<group>"; };
-		26CF12A91CFDC15B001E299A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
-		26CF12AA1CFDC15B001E299A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		26CF12A41CFD957E001E299A /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullPicButton.h; path = ../../BaseContents/fullPicButton.h; sourceTree = "<group>"; };
+		26CF12A51CFD957E001E299A /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullPicButton.m; path = ../../BaseContents/fullPicButton.m; sourceTree = "<group>"; };
+		26CF12AC1CFDD547001E299A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseModel.h; path = ../../BaseContents/BaseModel/BaseModel.h; sourceTree = "<group>"; };
+		26CF12AD1CFDD547001E299A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseModel.m; path = ../../BaseContents/BaseModel/BaseModel.m; sourceTree = "<group>"; };
+		26CF12B21CFDE15C001E299A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		26F6CB501CFA028F00DCC0DD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CF12B31CFDE15C001E299A /* Reveal.framework in Frameworks */,
 				26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */,
 				C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */,
 			);
@@ -136,6 +139,7 @@
 		145A46C98A928D1462328BB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26CF12B21CFDE15C001E299A /* Reveal.framework */,
 				26CF11991CFD2608001E299A /* AVFoundation.framework */,
 				616C6E3368D08F6552DAF67A /* libPods-MOMO.a */,
 			);
@@ -327,8 +331,8 @@
 		26CF12A81CFDC11A001E299A /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
-				26CF12A91CFDC15B001E299A /* BaseModel.h */,
-				26CF12AA1CFDC15B001E299A /* BaseModel.m */,
+				26CF12AC1CFDD547001E299A /* BaseModel.h */,
+				26CF12AD1CFDD547001E299A /* BaseModel.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -604,7 +608,7 @@
 			files = (
 				26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */,
 				26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */,
-				26CF12AB1CFDC15B001E299A /* BaseModel.m in Sources */,
+				26CF12AE1CFDD547001E299A /* BaseModel.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
 				26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */,
 				261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */,
@@ -758,6 +762,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MOMO/MOMOPch.pch";
 				INFOPLIST_FILE = MOMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -765,6 +773,44 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MOMO/Resource/ProjectResource/Pic/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"KVNProgress\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"RESideMenu\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HZL.MOMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -778,6 +824,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MOMO/MOMOPch.pch";
 				INFOPLIST_FILE = MOMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -785,6 +835,44 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MOMO/Resource/ProjectResource/Pic/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"KVNProgress\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"RESideMenu\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HZL.MOMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
