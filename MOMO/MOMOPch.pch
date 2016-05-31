@@ -1,0 +1,25 @@
+//
+//  MOMOPch.pch
+//  MOMO
+//
+//  Created by 黄梓伦 on 5/27/16.
+//  Copyright © 2016 黄梓伦. All rights reserved.
+//
+
+#ifndef MOMOPch_pch
+#define MOMOPch_pch
+//Third Party Library
+#import "ThirdParyLibrary.h"
+//API
+#pragma mark - API
+//音乐接口：拼接示例：http://mmmono.com/api/v3/meow/pool/?meow_type=8&start=10(或20，30等) 通过is_lastPage属性判断是否是最后一页
+#define musicAPI @"http://mmmono.com/api/v3/meow/pool/?meow_type=8"
+//Screen Width & Height
+
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+
+
+
+#endif /* MOMOPch_pch */
