@@ -8,6 +8,7 @@
 
 #import "AlbumViewController.h"
 #import "AlbumCell.h"
+
 NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
 
 @interface AlbumViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -24,6 +25,7 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.start = 0;
+    [self createUI];
 }
 
 - (NSMutableArray *)albumDataArray
@@ -107,20 +109,67 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
     {
         url = [albumAPI stringByAppendingString:[NSString stringWithFormat:@"&start=%ld",start]];
     }
-    
-    self.httpManager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+   
+   [self.httpManager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+       
+       AlbumModel *model = [AlbumModel yy_modelWithJSON:responseObject];
+       
+       if ([self.albumTableView.mj_footer isHidden]) {
         
+           [self.albumDataArray removeAllObjects];
         
+       }
+       
+       [self.albumDataArray addObjectsFromArray:model.meows];
+       
+        __weak typeof(self) weakSelf = self;
+       
+       dispatch_async(dispatch_get_main_queue(), ^{
+           
+           [weakSelf.albumTableView reloadData];
+           [weakSelf.albumTableView.mj_header endRefreshing];
+           [weakSelf.albumTableView.mj_footer endRefreshing];
+           weakSelf.albumTableView.mj_header.hidden = NO;
+           weakSelf.albumTableView.mj_footer.hidden= NO;
+           
+           if (model.is_last_page) {
+               
+               [weakSelf.albumTableView.mj_footer endRefreshingWithNoMoreData];
+               [KVNProgress showWithStatus:@"没有更多数据了，亲~"];
+           }
         
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        <#code#>
-    }
+       });
+       
+   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+       
+       [KVNProgress showErrorWithStatus:[NSString stringWithFormat:@"%@",error.localizedDescription]];
+       
+       
+   }];
     
 }
 
+#pragma mark - UITableView delegate methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return self.albumDataArray.count;
+    
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    AlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:AlbumCellIdentifier];
+    
+    Meows *model = self.albumDataArray[0];
+    
+    cell.model = model;
+    
+    return cell;
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

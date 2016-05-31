@@ -29,6 +29,7 @@
 		26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF129C1CFD73CF001E299A /* AlbumCell.m */; };
 		26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CF129D1CFD73CF001E299A /* AlbumCell.xib */; };
 		26CF12A61CFD957E001E299A /* fullPicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12A51CFD957E001E299A /* fullPicButton.m */; };
+		26CF12AB1CFDC15B001E299A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12AA1CFDC15B001E299A /* BaseModel.m */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
 		26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6CB501CFA028F00DCC0DD /* RightViewController.m */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
@@ -95,6 +96,8 @@
 		26CF129D1CFD73CF001E299A /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
 		26CF12A41CFD957E001E299A /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullPicButton.h; path = ../fullPicButton.h; sourceTree = "<group>"; };
 		26CF12A51CFD957E001E299A /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullPicButton.m; path = ../fullPicButton.m; sourceTree = "<group>"; };
+		26CF12A91CFDC15B001E299A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		26CF12AA1CFDC15B001E299A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		26F6CB501CFA028F00DCC0DD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -164,7 +167,7 @@
 		260BE2781CF5E29800DF151B /* MOMO */ = {
 			isa = PBXGroup;
 			children = (
-				26CF12A31CFD9558001E299A /* CustomiViews */,
+				26CF12A31CFD9558001E299A /* BaseContents */,
 				26F28A691CF7EEF40024E226 /* Controller */,
 				26F28A671CF7EEE20024E226 /* Resource */,
 				260BE27C1CF5E29800DF151B /* AppDelegate.h */,
@@ -301,11 +304,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		26CF12A31CFD9558001E299A /* CustomiViews */ = {
+		26CF12A31CFD9558001E299A /* BaseContents */ = {
 			isa = PBXGroup;
 			children = (
+				26CF12A81CFDC11A001E299A /* BaseModel */,
+				26F28A6A1CF7EF550024E226 /* BaseController */,
 				26CF12A71CFD9587001E299A /* Button */,
 			);
+			name = BaseContents;
 			path = CustomiViews;
 			sourceTree = "<group>";
 		};
@@ -316,6 +322,15 @@
 				26CF12A51CFD957E001E299A /* fullPicButton.m */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		26CF12A81CFDC11A001E299A /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				26CF12A91CFDC15B001E299A /* BaseModel.h */,
+				26CF12AA1CFDC15B001E299A /* BaseModel.m */,
+			);
+			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		26F28A671CF7EEE20024E226 /* Resource */ = {
@@ -341,7 +356,6 @@
 				26F28A6D1CF7EFD50024E226 /* Remind */,
 				26F28A6C1CF7EFC30024E226 /* Discovery */,
 				26F28A6B1CF7EFAE0024E226 /* Trends */,
-				26F28A6A1CF7EF550024E226 /* BaseController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,7 +372,8 @@
 				26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */,
 				26F6CB501CFA028F00DCC0DD /* RightViewController.m */,
 			);
-			path = BaseController;
+			name = BaseController;
+			path = ../Controller/BaseController;
 			sourceTree = "<group>";
 		};
 		26F28A6B1CF7EFAE0024E226 /* Trends */ = {
@@ -589,6 +604,7 @@
 			files = (
 				26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */,
 				26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */,
+				26CF12AB1CFDC15B001E299A /* BaseModel.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
 				26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */,
 				261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */,

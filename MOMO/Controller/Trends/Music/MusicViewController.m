@@ -124,7 +124,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 - (void)requestDataWithURLWithStart:(NSUInteger)start
 {
     
-    __weak typeof(self) weakSelf = self;
+    
     
     //Sets URL
     NSString *url;
@@ -152,6 +152,8 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
         //Adding the parsed data array(i.e meows) to musicArray which is the dataArray for tableView
         [self.musicArray addObjectsFromArray:musicModel.meows];
         
+        __weak typeof(self) weakSelf = self;
+        
         //Refreshing main UI screen
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -164,8 +166,9 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
             weakSelf.musicTableView.mj_header.hidden = NO;
             weakSelf.musicTableView.mj_footer.hidden = NO;
             
-            if (self.musicArray.count < 10) {
+            if (weakSelf.musicArray.count < 10) {
                 
+             
                 [weakSelf.musicTableView.mj_footer endRefreshingWithNoMoreData];
                 [KVNProgress showSuccessWithStatus:@"没有更多数据了，亲~"];
                 
@@ -178,11 +181,6 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
        
         [KVNProgress showErrorWithStatus:error.localizedDescription];
-        
-        if (weakSelf.start > 0) {
-            
-            weakSelf.start--;
-        }
         
     }];
 
