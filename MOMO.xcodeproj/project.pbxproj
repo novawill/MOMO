@@ -24,6 +24,10 @@
 		2681D9581CF8A677009EA988 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2681D9571CF8A677009EA988 /* LeftViewController.m */; };
 		26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF11991CFD2608001E299A /* AVFoundation.framework */; };
 		26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF119C1CFD4EBD001E299A /* MusicProgressView.m */; };
+		26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12951CFD73A6001E299A /* AlbumViewController.m */; };
+		26CF12991CFD73B4001E299A /* AlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12981CFD73B4001E299A /* AlbumModel.m */; };
+		26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF129C1CFD73CF001E299A /* AlbumCell.m */; };
+		26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CF129D1CFD73CF001E299A /* AlbumCell.xib */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
 		26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6CB501CFA028F00DCC0DD /* RightViewController.m */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
@@ -81,6 +85,13 @@
 		26CF11991CFD2608001E299A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		26CF119B1CFD4EBD001E299A /* MusicProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicProgressView.h; sourceTree = "<group>"; };
 		26CF119C1CFD4EBD001E299A /* MusicProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicProgressView.m; sourceTree = "<group>"; };
+		26CF12941CFD73A6001E299A /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		26CF12951CFD73A6001E299A /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		26CF12971CFD73B4001E299A /* AlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumModel.h; sourceTree = "<group>"; };
+		26CF12981CFD73B4001E299A /* AlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumModel.m; sourceTree = "<group>"; };
+		26CF129B1CFD73CF001E299A /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
+		26CF129C1CFD73CF001E299A /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
+		26CF129D1CFD73CF001E299A /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
 		26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		26F6CB501CFA028F00DCC0DD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -248,6 +259,44 @@
 			path = "Header Management";
 			sourceTree = "<group>";
 		};
+		26CF11EF1CFD733F001E299A /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				26CF12931CFD7384001E299A /* Controller */,
+				26CF12921CFD737C001E299A /* Model */,
+				26CF11F11CFD736A001E299A /* View */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		26CF11F11CFD736A001E299A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26CF129B1CFD73CF001E299A /* AlbumCell.h */,
+				26CF129C1CFD73CF001E299A /* AlbumCell.m */,
+				26CF129D1CFD73CF001E299A /* AlbumCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26CF12921CFD737C001E299A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26CF12971CFD73B4001E299A /* AlbumModel.h */,
+				26CF12981CFD73B4001E299A /* AlbumModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26CF12931CFD7384001E299A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26CF12941CFD73A6001E299A /* AlbumViewController.h */,
+				26CF12951CFD73A6001E299A /* AlbumViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		26F28A671CF7EEE20024E226 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +343,7 @@
 		26F28A6B1CF7EFAE0024E226 /* Trends */ = {
 			isa = PBXGroup;
 			children = (
+				26CF11EF1CFD733F001E299A /* Album */,
 				261DEF801CFAFCEA008DFFBF /* Music */,
 				261DEF7F1CFAE09E008DFFBF /* Explore */,
 			);
@@ -439,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				261DEF8B1CFAFD81008DFFBF /* MusicCell.xib in Resources */,
+				26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */,
 				260BE2891CF5E29800DF151B /* LaunchScreen.storyboard in Resources */,
 				2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */,
 				26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */,
@@ -516,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */,
+				26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
 				26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */,
 				261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */,
@@ -523,6 +575,8 @@
 				2681D93E1CF871FB009EA988 /* BaseViewController.m in Sources */,
 				260BE2811CF5E29800DF151B /* ViewController.m in Sources */,
 				2681D9581CF8A677009EA988 /* LeftViewController.m in Sources */,
+				26CF12991CFD73B4001E299A /* AlbumModel.m in Sources */,
+				26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */,
 				261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */,
 				260BE27E1CF5E29800DF151B /* AppDelegate.m in Sources */,
 				260BE27B1CF5E29800DF151B /* main.m in Sources */,
