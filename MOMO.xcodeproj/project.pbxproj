@@ -22,6 +22,8 @@
 		2681D93E1CF871FB009EA988 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2681D93D1CF871FB009EA988 /* BaseViewController.m */; };
 		2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2681D9541CF8A4BF009EA988 /* sideBackgoundPic.jpg */; };
 		2681D9581CF8A677009EA988 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2681D9571CF8A677009EA988 /* LeftViewController.m */; };
+		26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF11991CFD2608001E299A /* AVFoundation.framework */; };
+		26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF119C1CFD4EBD001E299A /* MusicProgressView.m */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
 		26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6CB501CFA028F00DCC0DD /* RightViewController.m */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
@@ -76,6 +78,9 @@
 		2681D9541CF8A4BF009EA988 /* sideBackgoundPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sideBackgoundPic.jpg; sourceTree = "<group>"; };
 		2681D9561CF8A677009EA988 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		2681D9571CF8A677009EA988 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		26CF11991CFD2608001E299A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		26CF119B1CFD4EBD001E299A /* MusicProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicProgressView.h; sourceTree = "<group>"; };
+		26CF119C1CFD4EBD001E299A /* MusicProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicProgressView.m; sourceTree = "<group>"; };
 		26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		26F6CB501CFA028F00DCC0DD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */,
 				C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +119,7 @@
 		145A46C98A928D1462328BB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26CF11991CFD2608001E299A /* AVFoundation.framework */,
 				616C6E3368D08F6552DAF67A /* libPods-MOMO.a */,
 			);
 			name = Frameworks;
@@ -226,6 +233,8 @@
 				261DEF871CFAFD81008DFFBF /* MusicCell.h */,
 				261DEF881CFAFD81008DFFBF /* MusicCell.m */,
 				261DEF891CFAFD81008DFFBF /* MusicCell.xib */,
+				26CF119B1CFD4EBD001E299A /* MusicProgressView.h */,
+				26CF119C1CFD4EBD001E299A /* MusicProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
 				26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */,
 				261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */,

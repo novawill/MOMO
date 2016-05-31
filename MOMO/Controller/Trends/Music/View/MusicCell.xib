@@ -73,14 +73,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-player-logo-blue" translatesAutoresizingMaskIntoConstraints="NO" id="ZiQ-an-EM9">
-                                <rect key="frame" x="489" y="10" width="20.5" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZiQ-an-EM9" secondAttribute="height" id="BBY-Rf-C3d"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgu-hA-ydL">
                                 <rect key="frame" x="439" y="10" width="42" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="n1A-UD-Bnp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -91,6 +88,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-player-logo-blue" translatesAutoresizingMaskIntoConstraints="NO" id="ZiQ-an-EM9">
+                                <rect key="frame" x="489" y="9" width="20.5" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZiQ-an-EM9" secondAttribute="height" id="BBY-Rf-C3d"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -116,20 +119,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-3a-Vwx">
-                        <rect key="frame" x="30" y="315" width="455" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="400" id="07C-37-IrE"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="07C-37-IrE"/>
-                            </mask>
-                        </variation>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-5C-xAB">
                         <rect key="frame" x="10" y="449" width="495" height="1"/>
                         <color key="backgroundColor" red="0.7551682692307693" green="0.7551682692307693" blue="0.7551682692307693" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,11 +180,25 @@
                         <color key="textColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v10-xN-gSl">
-                        <rect key="frame" x="20" y="350" width="475" height="94"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v10-xN-gSl">
+                        <rect key="frame" x="20" y="353" width="475" height="94"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-3a-Vwx">
+                        <rect key="frame" x="30" y="315" width="455" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="400" id="07C-37-IrE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="07C-37-IrE"/>
+                            </mask>
+                        </variation>
                     </label>
                 </subviews>
                 <constraints>

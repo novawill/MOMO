@@ -9,7 +9,7 @@
 #import "MusicViewController.h"
 #import "MusicCell.h"
 #import "MusicModel.h"
-
+#import <AVFoundation/AVFoundation.h>
 NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 
 @interface MusicViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -17,7 +17,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 @property (nonatomic, strong) UITableView *musicTableView;
 @property (nonatomic, strong) NSMutableArray *musicArray;
 @property (nonatomic, assign) NSUInteger start;//Property of Start
-
+@property (nonatomic, strong)  AVPlayer *audioPlayer;
 
 @end
 
@@ -43,13 +43,15 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 }
 
 
+#pragma mark - Creating AVPlayer and add it 
+
 
 - (void)creatView
 {
-    //Setting Navigation title with textcolor
+    //Sets Navigation title with textcolor
     [self addNavigationTitle:@"听音乐" andColor:[UIColor blackColor]];
     
-    //Setting backAction Button
+    //Sets backAction Button
     [self addBackButtonWithImage:[UIImage imageNamed:@"browser-back-black"]];
     
     __weak typeof(self) weakSelf = self;
@@ -70,10 +72,10 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     _musicTableView.dataSource = self;
     
-    //Setting row height
+    //Sets row height
     _musicTableView.rowHeight = ScreenH - 64;//Subtracting the height of UINavigationBar which is 64)
     
-    //Resitering MusicCell
+    //Resiters MusicCell
     [_musicTableView registerNib:[UINib nibWithNibName:@"MusicCell" bundle:nil] forCellReuseIdentifier:MusicCellIdentifier];
  
     //mj_Header & mj_Footer
@@ -96,7 +98,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
         weakSelf.musicTableView.mj_header.hidden = YES;
         
     }];
-    //Beginning request
+    //Starts request
   
     [_musicTableView.mj_header beginRefreshing];
     
@@ -125,7 +127,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     __weak typeof(self) weakSelf = self;
     
-    //Setting URL
+    //Sets URL
     NSString *url;
     
     if (start == 0) {
@@ -135,15 +137,16 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
        url = [musicAPI stringByAppendingString:[NSString stringWithFormat:@"&start=%lu",start]];
     }
     
-    //Requesting datasource
+    //Requests datasource
+    
+    
     
     [self.httpManager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         MusicModel *musicModel = [MusicModel yy_modelWithJSON:responseObject];
         
                                              
-        if (start == 0) {
-            
+        if ([self.musicTableView.mj_footer isHidden]) {
             [self.musicArray removeAllObjects];
         }
         

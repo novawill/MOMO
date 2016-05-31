@@ -7,6 +7,13 @@
 //
 
 #import "MusicCell.h"
+#import <AVFoundation/AVFoundation.h>
+
+@interface MusicCell()
+
+@property (nonatomic, strong)  AVPlayer *audioPlayer;
+
+@end
 
 @implementation MusicCell
 
@@ -21,6 +28,10 @@
 }
 
 - (IBAction)playAction:(id)sender {
+    
+    
+    
+    
 }
 - (IBAction)sharAction:(id)sender {
 }
@@ -35,7 +46,7 @@
     
     _model = model;
     
-    //Setting BackImage
+    //Sets BackImage
     [self.backImage sd_setImageWithURL:[NSURL URLWithString:_model.thumb.raw] placeholderImage:[UIImage imageNamed:@"WilliamHuang.jpg"]];
     
     
@@ -63,7 +74,7 @@
     
     self.commentNumberLabel.text = [NSString stringWithFormat:@"%ld",_model.comment_count];
     
-    //Converting seconds to mm:ss
+    //Converts seconds to mm:ss
     NSInteger musicDurationBySeconds = _model.music_duration;
     
     NSInteger minutes = musicDurationBySeconds / 60;
@@ -77,5 +88,7 @@
     self.songNameLabel.text = _model.song_name;
     
 }
+
+
 
 @end
