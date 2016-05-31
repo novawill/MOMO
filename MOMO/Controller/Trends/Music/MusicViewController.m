@@ -8,7 +8,6 @@
 
 #import "MusicViewController.h"
 #import "MusicCell.h"
-#import "MusicModel.h"
 #import <AVFoundation/AVFoundation.h>
 NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 
@@ -27,7 +26,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.start = 0;
-    [self creatView];
+    [self createView];
     
 }
 #pragma mark - LazyLoad for _musicArray
@@ -46,7 +45,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 #pragma mark - Creating AVPlayer and add it 
 
 
-- (void)creatView
+- (void)createView
 {
     //Sets Navigation title with textcolor
     [self addNavigationTitle:@"听音乐" andColor:[UIColor blackColor]];

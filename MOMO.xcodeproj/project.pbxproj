@@ -28,6 +28,7 @@
 		26CF12991CFD73B4001E299A /* AlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12981CFD73B4001E299A /* AlbumModel.m */; };
 		26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF129C1CFD73CF001E299A /* AlbumCell.m */; };
 		26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CF129D1CFD73CF001E299A /* AlbumCell.xib */; };
+		26CF12A61CFD957E001E299A /* fullPicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12A51CFD957E001E299A /* fullPicButton.m */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
 		26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6CB501CFA028F00DCC0DD /* RightViewController.m */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
@@ -92,6 +93,8 @@
 		26CF129B1CFD73CF001E299A /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
 		26CF129C1CFD73CF001E299A /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		26CF129D1CFD73CF001E299A /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		26CF12A41CFD957E001E299A /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullPicButton.h; path = ../fullPicButton.h; sourceTree = "<group>"; };
+		26CF12A51CFD957E001E299A /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullPicButton.m; path = ../fullPicButton.m; sourceTree = "<group>"; };
 		26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		26F6CB501CFA028F00DCC0DD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		260BE2781CF5E29800DF151B /* MOMO */ = {
 			isa = PBXGroup;
 			children = (
+				26CF12A31CFD9558001E299A /* CustomiViews */,
 				26F28A691CF7EEF40024E226 /* Controller */,
 				26F28A671CF7EEE20024E226 /* Resource */,
 				260BE27C1CF5E29800DF151B /* AppDelegate.h */,
@@ -295,6 +299,23 @@
 				26CF12951CFD73A6001E299A /* AlbumViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		26CF12A31CFD9558001E299A /* CustomiViews */ = {
+			isa = PBXGroup;
+			children = (
+				26CF12A71CFD9587001E299A /* Button */,
+			);
+			path = CustomiViews;
+			sourceTree = "<group>";
+		};
+		26CF12A71CFD9587001E299A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				26CF12A41CFD957E001E299A /* fullPicButton.h */,
+				26CF12A51CFD957E001E299A /* fullPicButton.m */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		26F28A671CF7EEE20024E226 /* Resource */ = {
@@ -579,6 +600,7 @@
 				26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */,
 				261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */,
 				260BE27E1CF5E29800DF151B /* AppDelegate.m in Sources */,
+				26CF12A61CFD957E001E299A /* fullPicButton.m in Sources */,
 				260BE27B1CF5E29800DF151B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
