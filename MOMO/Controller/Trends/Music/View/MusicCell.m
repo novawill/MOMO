@@ -59,8 +59,8 @@
         self.typeLabel.text = [NSString stringWithFormat:@"#%@",_model.category.name];
     }else
     {
-        //On account of several tests, some _model.category, which should had be "音乐" in accordance with json file, returned nil value for uncertain reason, so I added this assginment to avoid this incident.
-        self.typeLabel.text = @"#音乐";
+        //On account of several tests, some _model.category, which should had be "音乐" in accordance with json file, returned nil value or even had no property of category for uncertain reason, so I let typeLabel.text be "#其它" in that situation.
+        self.typeLabel.text = @"#其它";
     }
     
     

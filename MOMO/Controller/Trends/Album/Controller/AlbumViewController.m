@@ -162,9 +162,11 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
     
     AlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:AlbumCellIdentifier];
     
-    Meows *model = self.albumDataArray[0];
+    Meows *model = self.albumDataArray[indexPath.row];
     
     cell.model = model;
+    
+    cell.userInteractionEnabled = NO;
     
     return cell;
     
