@@ -18,21 +18,21 @@
 		261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF881CFAFD81008DFFBF /* MusicCell.m */; };
 		261DEF8B1CFAFD81008DFFBF /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261DEF891CFAFD81008DFFBF /* MusicCell.xib */; };
 		261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF8D1CFB399D008DFFBF /* MusicModel.m */; };
-		2681D93B1CF871E9009EA988 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2681D93A1CF871E9009EA988 /* BaseTabBarController.m */; };
-		2681D93E1CF871FB009EA988 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2681D93D1CF871FB009EA988 /* BaseViewController.m */; };
+		265599EC1CFE758500389A2F /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E01CFE758500389A2F /* BaseTabBarController.m */; };
+		265599ED1CFE758500389A2F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E21CFE758500389A2F /* BaseViewController.m */; };
+		265599EE1CFE758500389A2F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E41CFE758500389A2F /* LeftViewController.m */; };
+		265599EF1CFE758500389A2F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E61CFE758500389A2F /* RightViewController.m */; };
+		265599F11CFE758500389A2F /* fullPicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599EB1CFE758500389A2F /* fullPicButton.m */; };
+		265599F21CFE766600389A2F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E81CFE758500389A2F /* BaseModel.m */; };
 		2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2681D9541CF8A4BF009EA988 /* sideBackgoundPic.jpg */; };
-		2681D9581CF8A677009EA988 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2681D9571CF8A677009EA988 /* LeftViewController.m */; };
 		26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF11991CFD2608001E299A /* AVFoundation.framework */; };
 		26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF119C1CFD4EBD001E299A /* MusicProgressView.m */; };
 		26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12951CFD73A6001E299A /* AlbumViewController.m */; };
 		26CF12991CFD73B4001E299A /* AlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12981CFD73B4001E299A /* AlbumModel.m */; };
 		26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF129C1CFD73CF001E299A /* AlbumCell.m */; };
 		26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CF129D1CFD73CF001E299A /* AlbumCell.xib */; };
-		26CF12A61CFD957E001E299A /* fullPicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12A51CFD957E001E299A /* fullPicButton.m */; };
-		26CF12AE1CFDD547001E299A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF12AD1CFDD547001E299A /* BaseModel.m */; };
 		26CF12B31CFDE15C001E299A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF12B21CFDE15C001E299A /* Reveal.framework */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
-		26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6CB501CFA028F00DCC0DD /* RightViewController.m */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
 /* End PBXBuildFile section */
 
@@ -76,15 +76,21 @@
 		261DEF891CFAFD81008DFFBF /* MusicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		261DEF8C1CFB399D008DFFBF /* MusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
 		261DEF8D1CFB399D008DFFBF /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
-		2681D9391CF871E9009EA988 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
-		2681D93A1CF871E9009EA988 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
-		2681D93C1CF871FB009EA988 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		2681D93D1CF871FB009EA988 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		265599DF1CFE758500389A2F /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		265599E01CFE758500389A2F /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		265599E11CFE758500389A2F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		265599E21CFE758500389A2F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		265599E31CFE758500389A2F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		265599E41CFE758500389A2F /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		265599E51CFE758500389A2F /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		265599E61CFE758500389A2F /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		265599E71CFE758500389A2F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		265599E81CFE758500389A2F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		265599EA1CFE758500389A2F /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fullPicButton.h; sourceTree = "<group>"; };
+		265599EB1CFE758500389A2F /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fullPicButton.m; sourceTree = "<group>"; };
 		2681D9521CF89F37009EA988 /* MOMOPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MOMOPch.pch; path = ../MOMOPch.pch; sourceTree = "<group>"; };
 		2681D9531CF89FCC009EA988 /* ThirdParyLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThirdParyLibrary.h; path = ../ThirdParyLibrary.h; sourceTree = "<group>"; };
 		2681D9541CF8A4BF009EA988 /* sideBackgoundPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sideBackgoundPic.jpg; sourceTree = "<group>"; };
-		2681D9561CF8A677009EA988 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		2681D9571CF8A677009EA988 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		26CF11991CFD2608001E299A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		26CF119B1CFD4EBD001E299A /* MusicProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicProgressView.h; sourceTree = "<group>"; };
 		26CF119C1CFD4EBD001E299A /* MusicProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicProgressView.m; sourceTree = "<group>"; };
@@ -95,14 +101,8 @@
 		26CF129B1CFD73CF001E299A /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
 		26CF129C1CFD73CF001E299A /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		26CF129D1CFD73CF001E299A /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
-		26CF12A41CFD957E001E299A /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullPicButton.h; path = ../../BaseContents/fullPicButton.h; sourceTree = "<group>"; };
-		26CF12A51CFD957E001E299A /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullPicButton.m; path = ../../BaseContents/fullPicButton.m; sourceTree = "<group>"; };
-		26CF12AC1CFDD547001E299A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseModel.h; path = ../../BaseContents/BaseModel/BaseModel.h; sourceTree = "<group>"; };
-		26CF12AD1CFDD547001E299A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseModel.m; path = ../../BaseContents/BaseModel/BaseModel.m; sourceTree = "<group>"; };
 		26CF12B21CFDE15C001E299A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
-		26F6CB501CFA028F00DCC0DD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		341419B4C0DE6360A031B169 /* Pods-MOMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MOMO/Pods-MOMO.debug.xcconfig"; sourceTree = "<group>"; };
 		616C6E3368D08F6552DAF67A /* libPods-MOMO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MOMO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D282761C1C69EDB996548A1A /* Pods-MOMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-MOMO/Pods-MOMO.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		260BE2781CF5E29800DF151B /* MOMO */ = {
 			isa = PBXGroup;
 			children = (
-				26CF12A31CFD9558001E299A /* BaseContents */,
+				265599DC1CFE758500389A2F /* BaseContents */,
 				26F28A691CF7EEF40024E226 /* Controller */,
 				26F28A671CF7EEE20024E226 /* Resource */,
 				260BE27C1CF5E29800DF151B /* AppDelegate.h */,
@@ -270,6 +270,49 @@
 			path = "Header Management";
 			sourceTree = "<group>";
 		};
+		265599DC1CFE758500389A2F /* BaseContents */ = {
+			isa = PBXGroup;
+			children = (
+				265599DD1CFE758500389A2F /* BaseModel */,
+				265599E91CFE758500389A2F /* Button */,
+				265599EA1CFE758500389A2F /* fullPicButton.h */,
+				265599EB1CFE758500389A2F /* fullPicButton.m */,
+			);
+			path = BaseContents;
+			sourceTree = "<group>";
+		};
+		265599DD1CFE758500389A2F /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				265599DE1CFE758500389A2F /* BaseController */,
+				265599E71CFE758500389A2F /* BaseModel.h */,
+				265599E81CFE758500389A2F /* BaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		265599DE1CFE758500389A2F /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				265599DF1CFE758500389A2F /* BaseTabBarController.h */,
+				265599E01CFE758500389A2F /* BaseTabBarController.m */,
+				265599E11CFE758500389A2F /* BaseViewController.h */,
+				265599E21CFE758500389A2F /* BaseViewController.m */,
+				265599E31CFE758500389A2F /* LeftViewController.h */,
+				265599E41CFE758500389A2F /* LeftViewController.m */,
+				265599E51CFE758500389A2F /* RightViewController.h */,
+				265599E61CFE758500389A2F /* RightViewController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		265599E91CFE758500389A2F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		26CF11EF1CFD733F001E299A /* Album */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,35 +351,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		26CF12A31CFD9558001E299A /* BaseContents */ = {
-			isa = PBXGroup;
-			children = (
-				26CF12A81CFDC11A001E299A /* BaseModel */,
-				26F28A6A1CF7EF550024E226 /* BaseController */,
-				26CF12A71CFD9587001E299A /* Button */,
-			);
-			name = BaseContents;
-			path = CustomiViews;
-			sourceTree = "<group>";
-		};
-		26CF12A71CFD9587001E299A /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				26CF12A41CFD957E001E299A /* fullPicButton.h */,
-				26CF12A51CFD957E001E299A /* fullPicButton.m */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		26CF12A81CFDC11A001E299A /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-				26CF12AC1CFDD547001E299A /* BaseModel.h */,
-				26CF12AD1CFDD547001E299A /* BaseModel.m */,
-			);
-			path = BaseModel;
-			sourceTree = "<group>";
-		};
 		26F28A671CF7EEE20024E226 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,22 +376,6 @@
 				26F28A6B1CF7EFAE0024E226 /* Trends */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		26F28A6A1CF7EF550024E226 /* BaseController */ = {
-			isa = PBXGroup;
-			children = (
-				2681D9391CF871E9009EA988 /* BaseTabBarController.h */,
-				2681D93A1CF871E9009EA988 /* BaseTabBarController.m */,
-				2681D93C1CF871FB009EA988 /* BaseViewController.h */,
-				2681D93D1CF871FB009EA988 /* BaseViewController.m */,
-				2681D9561CF8A677009EA988 /* LeftViewController.h */,
-				2681D9571CF8A677009EA988 /* LeftViewController.m */,
-				26F6CB4F1CFA028F00DCC0DD /* RightViewController.h */,
-				26F6CB501CFA028F00DCC0DD /* RightViewController.m */,
-			);
-			name = BaseController;
-			path = ../Controller/BaseController;
 			sourceTree = "<group>";
 		};
 		26F28A6B1CF7EFAE0024E226 /* Trends */ = {
@@ -607,20 +605,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CF119D1CFD4EBD001E299A /* MusicProgressView.m in Sources */,
+				265599ED1CFE758500389A2F /* BaseViewController.m in Sources */,
+				265599F21CFE766600389A2F /* BaseModel.m in Sources */,
 				26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */,
-				26CF12AE1CFDD547001E299A /* BaseModel.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
-				26F6CB511CFA028F00DCC0DD /* RightViewController.m in Sources */,
+				265599F11CFE758500389A2F /* fullPicButton.m in Sources */,
 				261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */,
-				2681D93B1CF871E9009EA988 /* BaseTabBarController.m in Sources */,
-				2681D93E1CF871FB009EA988 /* BaseViewController.m in Sources */,
 				260BE2811CF5E29800DF151B /* ViewController.m in Sources */,
-				2681D9581CF8A677009EA988 /* LeftViewController.m in Sources */,
 				26CF12991CFD73B4001E299A /* AlbumModel.m in Sources */,
+				265599EF1CFE758500389A2F /* RightViewController.m in Sources */,
 				26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */,
 				261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */,
+				265599EC1CFE758500389A2F /* BaseTabBarController.m in Sources */,
 				260BE27E1CF5E29800DF151B /* AppDelegate.m in Sources */,
-				26CF12A61CFD957E001E299A /* fullPicButton.m in Sources */,
+				265599EE1CFE758500389A2F /* LeftViewController.m in Sources */,
 				260BE27B1CF5E29800DF151B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

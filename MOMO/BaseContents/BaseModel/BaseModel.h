@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Images,Meows,Group,g_m_thumb,Master_Info,g_m_coordinate,Thumb,Album_Cover,Cate,User,u_Coordinate;
+@class AlbumImages,Meows,Group,g_m_thumb,Master_Info,g_m_coordinate,Thumb,Album_Cover,Cate,User,u_Coordinate;
 @interface BaseModel : NSObject<YYModel>
 
 @property (nonatomic, assign) BOOL is_last_page;
@@ -67,11 +67,22 @@
 
 @property (nonatomic, copy) NSString *desc;
 
-@property (nonatomic, strong) NSArray<Images *> *images;
+@property (nonatomic, strong) NSArray<AlbumImages *> *images;
 
 @property (nonatomic, assign) NSInteger image_count;
 
 @end
+
+@interface AlbumImages : NSObject<YYModel>
+
+@property (nonatomic, copy) NSString *raw;
+
+@property (nonatomic, assign) NSInteger width;
+
+@property (nonatomic, assign) NSInteger height;
+
+@end
+
 
 @interface Group : NSObject<YYModel>
 
@@ -211,15 +222,6 @@
 
 @end
 
-@interface Images : NSObject<YYModel>
-
-@property (nonatomic, copy) NSString *raw;
-
-@property (nonatomic, assign) NSInteger width;
-
-@property (nonatomic, assign) NSInteger height;
-
-@end
 
 
 

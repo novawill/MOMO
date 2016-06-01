@@ -12,7 +12,7 @@
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
 {
     
-    return @{@"meows":[Meows class]};
+    return @{@"meows":@"Meows"};
     
 }
 
@@ -22,7 +22,7 @@
 @implementation Meows
 + (NSDictionary *)modelContainerPropertyGenericClass
 {
-    return @{@"album_cover":[Album_Cover class],@"category":[Cate class],@"group":[Group class],@"user":[User class],@"thumb":[Thumb class]/*,@"images":[Images class]*/};
+    return @{@"album_cover":@"Album_cover",@"category":@"Cate",@"group":@"Group",@"user":@"User",@"thumb":@"Thumb", @"images": [AlbumImages class]};
 }
 
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper
@@ -32,6 +32,11 @@
     
     
 }
+@end
+
+@implementation AlbumImages
+
+
 @end
 
 
