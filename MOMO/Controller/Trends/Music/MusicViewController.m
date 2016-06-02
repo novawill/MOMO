@@ -45,6 +45,16 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 #pragma mark - Creating AVPlayer and add it 
 
 
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    
+    
+    
+    [self.musicTableView.mj_header beginRefreshing];
+    
+    
+}
+
 - (void)createView
 {
     //Sets Navigation title with textcolor
@@ -101,6 +111,9 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
   
     [_musicTableView.mj_header beginRefreshing];
     
+    
+    
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -121,6 +134,10 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     return cell;
     
+}
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
 }
 
 - (void)requestDataWithURLWithStart:(NSUInteger)start

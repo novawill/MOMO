@@ -32,6 +32,10 @@
 		26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF129C1CFD73CF001E299A /* AlbumCell.m */; };
 		26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CF129D1CFD73CF001E299A /* AlbumCell.xib */; };
 		26CF12B31CFDE15C001E299A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF12B21CFDE15C001E299A /* Reveal.framework */; };
+		26D7E6261CFFC658000C1D5B /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D7E6251CFFC658000C1D5B /* CheckInViewController.m */; };
+		26D7E62A1CFFC67E000C1D5B /* CheckInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D7E6281CFFC67E000C1D5B /* CheckInCell.m */; };
+		26D7E62B1CFFC67E000C1D5B /* CheckInCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D7E6291CFFC67E000C1D5B /* CheckInCell.xib */; };
+		26D7E62E1CFFC68E000C1D5B /* CheckInModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D7E62D1CFFC68E000C1D5B /* CheckInModel.m */; };
 		26F5E40C1CFE877B00F28F98 /* XLSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F5E40B1CFE877B00F28F98 /* XLSphereView.m */; };
 		26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F6CB4A1CF9E3E600DCC0DD /* Assets.xcassets */; };
 		C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616C6E3368D08F6552DAF67A /* libPods-MOMO.a */; };
@@ -103,6 +107,13 @@
 		26CF129C1CFD73CF001E299A /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		26CF129D1CFD73CF001E299A /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
 		26CF12B21CFDE15C001E299A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		26D7E6241CFFC658000C1D5B /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
+		26D7E6251CFFC658000C1D5B /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		26D7E6271CFFC67E000C1D5B /* CheckInCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInCell.h; sourceTree = "<group>"; };
+		26D7E6281CFFC67E000C1D5B /* CheckInCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInCell.m; sourceTree = "<group>"; };
+		26D7E6291CFFC67E000C1D5B /* CheckInCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInCell.xib; sourceTree = "<group>"; };
+		26D7E62C1CFFC68E000C1D5B /* CheckInModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInModel.h; sourceTree = "<group>"; };
+		26D7E62D1CFFC68E000C1D5B /* CheckInModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInModel.m; sourceTree = "<group>"; };
 		26F5E4081CFE877B00F28F98 /* XLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLMatrix.h; sourceTree = "<group>"; };
 		26F5E4091CFE877B00F28F98 /* XLPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPoint.h; sourceTree = "<group>"; };
 		26F5E40A1CFE877B00F28F98 /* XLSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSphereView.h; sourceTree = "<group>"; };
@@ -357,6 +368,44 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		26D7E6201CFFC619000C1D5B /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				26D7E6231CFFC631000C1D5B /* Controller */,
+				26D7E6221CFFC629000C1D5B /* View */,
+				26D7E6211CFFC621000C1D5B /* Model */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		26D7E6211CFFC621000C1D5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26D7E62C1CFFC68E000C1D5B /* CheckInModel.h */,
+				26D7E62D1CFFC68E000C1D5B /* CheckInModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26D7E6221CFFC629000C1D5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26D7E6271CFFC67E000C1D5B /* CheckInCell.h */,
+				26D7E6281CFFC67E000C1D5B /* CheckInCell.m */,
+				26D7E6291CFFC67E000C1D5B /* CheckInCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26D7E6231CFFC631000C1D5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26D7E6241CFFC658000C1D5B /* CheckInViewController.h */,
+				26D7E6251CFFC658000C1D5B /* CheckInViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		26F28A671CF7EEE20024E226 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +436,7 @@
 		26F28A6B1CF7EFAE0024E226 /* Trends */ = {
 			isa = PBXGroup;
 			children = (
+				26D7E6201CFFC619000C1D5B /* CheckIn */,
 				26CF11EF1CFD733F001E299A /* Album */,
 				261DEF801CFAFCEA008DFFBF /* Music */,
 				261DEF7F1CFAE09E008DFFBF /* Explore */,
@@ -556,6 +606,7 @@
 				260BE2891CF5E29800DF151B /* LaunchScreen.storyboard in Resources */,
 				2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */,
 				26F6CB4B1CF9E3E600DCC0DD /* Assets.xcassets in Resources */,
+				26D7E62B1CFFC67E000C1D5B /* CheckInCell.xib in Resources */,
 				260BE2841CF5E29800DF151B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +684,7 @@
 				265599ED1CFE758500389A2F /* BaseViewController.m in Sources */,
 				265599F21CFE766600389A2F /* BaseModel.m in Sources */,
 				26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */,
+				26D7E6261CFFC658000C1D5B /* CheckInViewController.m in Sources */,
 				26F5E40C1CFE877B00F28F98 /* XLSphereView.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
 				265599F11CFE758500389A2F /* fullPicButton.m in Sources */,
@@ -643,9 +695,11 @@
 				26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */,
 				261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */,
 				265599EC1CFE758500389A2F /* BaseTabBarController.m in Sources */,
+				26D7E62A1CFFC67E000C1D5B /* CheckInCell.m in Sources */,
 				260BE27E1CF5E29800DF151B /* AppDelegate.m in Sources */,
 				265599EE1CFE758500389A2F /* LeftViewController.m in Sources */,
 				260BE27B1CF5E29800DF151B /* main.m in Sources */,
+				26D7E62E1CFFC68E000C1D5B /* CheckInModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,8 +24,27 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.start = 0;
     [self createUI];
+}
+
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    
+
+        
+    [self.albumTableView.mj_header beginRefreshing];
+
+    
 }
 
 - (NSMutableArray *)albumDataArray
