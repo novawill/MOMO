@@ -46,34 +46,43 @@
                             <constraint firstAttribute="height" constant="200" id="EAA-zg-z1B"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-4u-xah" customClass="fullPicButton">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-4u-xah" customClass="fullPicButton">
                         <rect key="frame" x="10" y="295" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="37Y-bl-DOD"/>
                             <constraint firstAttribute="width" secondItem="mwR-4u-xah" secondAttribute="height" id="W4k-kd-Ifh"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="item-btn-share-black"/>
+                        <connections>
+                            <action selector="shareButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Yg-jH-eKk"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-OP-ab3" customClass="fullPicButton">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-OP-ab3" customClass="fullPicButton">
                         <rect key="frame" x="55" y="295" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="WaG-IX-bbi"/>
                             <constraint firstAttribute="width" secondItem="yUD-OP-ab3" secondAttribute="height" id="vd1-LX-bxC"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="item-btn-like-black"/>
+                        <connections>
+                            <action selector="likeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jkl-7M-2sL"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJI-My-aR5" customClass="fullPicButton">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJI-My-aR5" customClass="fullPicButton">
                         <rect key="frame" x="100" y="295" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="RcR-bm-WTO"/>
                             <constraint firstAttribute="width" secondItem="SJI-My-aR5" secondAttribute="height" id="ny3-F8-k0q"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="item-btn-thumb-black"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="ny3-F8-k0q"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="thumbButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dGY-hQ-9HR"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-FO-ylB">
                         <rect key="frame" x="140" y="300" width="42" height="20.5"/>
@@ -81,18 +90,21 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I81-Yo-jgd" customClass="fullPicButton">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I81-Yo-jgd" customClass="fullPicButton">
                         <rect key="frame" x="197" y="295" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="Qe1-zY-c4j"/>
                             <constraint firstAttribute="width" secondItem="I81-Yo-jgd" secondAttribute="height" id="u1Q-5E-nN0"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="item-btn-comment-black"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="u1Q-5E-nN0"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="commentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yYT-DU-t8f"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoB-3e-msI">
                         <rect key="frame" x="237" y="299" width="42" height="20.5"/>
@@ -126,6 +138,7 @@
                     <constraint firstItem="fcS-px-KnT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Yeh-VZ-BPp"/>
                     <constraint firstItem="hyQ-d8-L9T" firstAttribute="bottom" secondItem="fcS-px-KnT" secondAttribute="bottom" id="cu2-CK-Y1i"/>
                     <constraint firstItem="RPJ-FO-ylB" firstAttribute="leading" secondItem="SJI-My-aR5" secondAttribute="trailing" constant="10" id="eAA-Vh-IMK"/>
+                    <constraint firstAttribute="bottom" secondItem="mwR-4u-xah" secondAttribute="bottom" constant="15" id="hPv-Te-G7Z"/>
                     <constraint firstItem="SJI-My-aR5" firstAttribute="top" secondItem="yUD-OP-ab3" secondAttribute="top" id="j7f-As-n71"/>
                     <constraint firstItem="I81-Yo-jgd" firstAttribute="bottom" secondItem="SJI-My-aR5" secondAttribute="bottom" id="nvC-hf-dTZ"/>
                     <constraint firstItem="mwR-4u-xah" firstAttribute="top" secondItem="wxV-YI-efI" secondAttribute="bottom" constant="25" id="rW7-IC-sm8"/>
@@ -140,7 +153,22 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="checkInImage" destination="wxV-YI-efI" id="JkC-Z2-A01"/>
+                <outlet property="commentNumber" destination="aoB-3e-msI" id="ImX-1h-h0u"/>
+                <outlet property="iconDesc" destination="hyQ-d8-L9T" id="c07-Wl-L8S"/>
+                <outlet property="iconImage" destination="fcS-px-KnT" id="QPn-W8-pX9"/>
+                <outlet property="iconLabel" destination="vkv-lW-2D0" id="MQ4-VZ-LUE"/>
+                <outlet property="thumbNumber" destination="RPJ-FO-ylB" id="z8m-PD-T5q"/>
+                <outlet property="time" destination="ocA-cd-Dxc" id="SA0-gG-s6X"/>
+            </connections>
             <point key="canvasLocation" x="389" y="302"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="item-btn-comment-black" width="42" height="50"/>
+        <image name="item-btn-like-black" width="48" height="50"/>
+        <image name="item-btn-share-black" width="144" height="150"/>
+        <image name="item-btn-thumb-black" width="42" height="50"/>
+    </resources>
 </document>

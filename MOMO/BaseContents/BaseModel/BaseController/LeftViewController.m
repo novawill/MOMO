@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 #import "MusicViewController.h"
 #import "AlbumViewController.h"
+#import "CheckInViewController.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -53,6 +54,13 @@
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;
+            
+        case 2:
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[[CheckInViewController alloc] init]]
+                                                         animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+
         default:
             break;
     }

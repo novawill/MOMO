@@ -13,12 +13,12 @@
 
 +(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
 {
-    return @{@"moewos_list":[Meows_list class]};
+    return @{@"meow_list":[Meow_list class]};
 }
 
 @end
 
-@implementation Meows_list
+@implementation Meow_list
 
 +(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
 {

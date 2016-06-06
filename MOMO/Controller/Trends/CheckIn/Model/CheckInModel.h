@@ -10,11 +10,11 @@
 @class Meows_list;
 @interface CheckInModel : BaseModel<YYModel>
 
-@property (nonatomic, strong) NSArray<Meows_list*> *meows_list;
+@property (nonatomic, strong) NSArray<Meows_list*> *meow_list;
 
 @end
 
-@interface Meows_list : NSObject<YYModel>
+@interface Meow_list : NSObject<YYModel>
 
 @property (nonatomic, copy) NSString *music_url;
 

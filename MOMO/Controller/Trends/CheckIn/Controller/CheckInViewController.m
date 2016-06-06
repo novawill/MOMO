@@ -8,7 +8,7 @@
 
 #import "CheckInViewController.h"
 #import "CheckInModel.h"
-
+#import "CheckInCell.h"
 
 NSString * const checkInCellIdentifier = @"checkInIdentifier";
 
@@ -32,12 +32,27 @@ NSString * const checkInCellIdentifier = @"checkInIdentifier";
     
     
 }
+- (NSMutableArray *)checkInDataArray
+{
+    
+    if (!_checkInDataArray) {
+        
+        _checkInDataArray = [NSMutableArray array];
+        
+    }
+    return _checkInDataArray;
+}
+
 
 - (void)creatUI
 {
     
     __weak typeof(self) weakSelf = self;
     self.checkInTableView = [[UITableView alloc] init];
+    
+    [self.view addSubview:self.checkInTableView];
+    
+    self.checkInTableView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.checkInTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -48,6 +63,8 @@ NSString * const checkInCellIdentifier = @"checkInIdentifier";
     self.checkInTableView.delegate = self;
     
     self.checkInTableView.dataSource = self;
+    
+    self.checkInTableView.rowHeight = ScreenH - 64;
     
     [self.checkInTableView registerNib:[UINib nibWithNibName:@"CheckInCell" bundle:nil] forCellReuseIdentifier:checkInCellIdentifier];
     
@@ -80,7 +97,7 @@ NSString * const checkInCellIdentifier = @"checkInIdentifier";
     
     __weak typeof(self) weakSelf = self;
     NSString *url;
-    if (!start) {
+    if ([start  isEqual: @""]) {
         
         url = checkInAPI;
         
@@ -100,7 +117,8 @@ NSString * const checkInCellIdentifier = @"checkInIdentifier";
             
         }
         
-        [self.checkInDataArray addObject:model.meows_list];
+        [self.checkInDataArray addObjectsFromArray:model.meow_list];
+        self.start = [NSString stringWithFormat:@"%ld",model.start];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -128,6 +146,27 @@ NSString * const checkInCellIdentifier = @"checkInIdentifier";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - TableView Delegate Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    
+    return self.checkInDataArray.count;
+    
+}
 
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    CheckInCell *cell = [tableView dequeueReusableCellWithIdentifier:checkInCellIdentifier forIndexPath:indexPath];
+    
+    Meow_list *model = self.checkInDataArray[indexPath.row];
+    
+    cell.model = model;
+    
+    return cell;
+    
+    
+    
+}
 @end
