@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "fullPicButton.h"
 @interface CheckInCell : UITableViewCell
 
 @end

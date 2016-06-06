@@ -14,6 +14,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 @interface MusicViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *musicTableView;
+//Sets an array to populate data requested from the Internet
 @property (nonatomic, strong) NSMutableArray *musicArray;
 @property (nonatomic, assign) NSUInteger start;//Property of Start
 @property (nonatomic, strong)  AVPlayer *audioPlayer;
@@ -185,7 +186,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
             weakSelf.musicTableView.mj_header.hidden = NO;
             weakSelf.musicTableView.mj_footer.hidden = NO;
             
-            if (weakSelf.musicArray.count < 10) {
+            if (musicModel.is_last_page) {
                 
              
                 [weakSelf.musicTableView.mj_footer endRefreshingWithNoMoreData];

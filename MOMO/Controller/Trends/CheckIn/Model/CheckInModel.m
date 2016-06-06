@@ -10,4 +10,20 @@
 
 @implementation CheckInModel
 
+
++(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+{
+    return @{@"moewos_list":[Meows_list class]};
+}
+
+@end
+
+@implementation Meows_list
+
++(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+{
+    
+    return @{@"album_cover":@"Album_cover",@"category":@"Cate",@"group":@"Group",@"user":@"User",@"thumb":@"Thumb"};
+}
+
 @end

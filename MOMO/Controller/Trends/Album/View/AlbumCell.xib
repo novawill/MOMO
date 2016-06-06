@@ -104,8 +104,8 @@
                         <state key="normal" image="item-btn-like-white"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="cGG-lp-bWG"/>
                                 <exclude reference="LFs-kE-h0k"/>
+                                <exclude reference="cGG-lp-bWG"/>
                             </mask>
                         </variation>
                         <connections>
@@ -121,8 +121,8 @@
                         <state key="normal" image="item-btn-thumb-white"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="O5v-Sf-9i1"/>
                                 <exclude reference="DgP-xr-nhX"/>
+                                <exclude reference="O5v-Sf-9i1"/>
                             </mask>
                         </variation>
                         <connections>

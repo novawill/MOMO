@@ -19,12 +19,18 @@
 
 #define albumAPI @"http://mmmono.com/api/v3/meow/pool/?meow_type=9"
 
+//CheckIn API example:http://mmmono.com/api/v3/group/100353/content/kind/2/?start=994892.0 
+
+#define checkInAPI @"http://mmmono.com/api/v3/group/100353/content/kind/2/?"
+
 //Screen Width & Height
 
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 
+//Runtime
+#import <objc/runtime.h>
 
 
 #endif /* MOMOPch_pch */
