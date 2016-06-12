@@ -30,7 +30,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *commentNumberLabel;
 @property (nonatomic, copy) NSString *urlString;
 @property (nonatomic, strong) AVPlayer *audioPlayer;
-@property (nonatomic, strong)  void (^playMusic)(AVPlayer *player);
+@property (nonatomic, strong)  void (^playMusic)(BOOL isplaying);
+@property (nonatomic, strong) void (^transModel)(Meows *model);
 @property (nonatomic, strong) Meows *model;
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 

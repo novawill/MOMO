@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
-
+#import "MusicModel.h"
 @interface MusicDetailViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+
+@property (nonatomic, strong) Meows *model;
 
 @end

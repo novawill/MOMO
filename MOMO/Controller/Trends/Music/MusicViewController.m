@@ -9,6 +9,8 @@
 #import "MusicViewController.h"
 #import "MusicCell.h"
 #import <AVFoundation/AVFoundation.h>
+#import "MusicDetailViewController.h"
+#define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 
 @interface MusicViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -18,20 +20,62 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 @property (nonatomic, strong) NSMutableArray *musicArray;
 @property (nonatomic, assign) NSUInteger start;//Property of Start
 @property (nonatomic, strong)  AVPlayer *audioPlayer;
-
 @end
 
 @implementation MusicViewController
-
+{
+    UIImageView *imageView;//ImageView for rotation in rightBarbuttonItem when the music is playing
+    CGFloat imageviewAngle;
+   // BOOL isPlay; //Whether the music is playing
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.start = 0;
     [self createView];
-    [self playerMusic];
-    //[self customNavigationItemMethodsImage:[UIImage imageNamed:] target:<#(id)#> selector:<#(SEL)#> isLeft:NO]
+    //[self playerMusic];
+    self.navigationItem.rightBarButtonItem = nil;
+    
     
 }
+- (void)setRightBarButtonItem
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 40, 40);
+    
+    imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"btn-player-no-bg"]];
+    imageView.autoresizingMask = UIViewAutoresizingNone;
+    imageView.contentMode = UIViewContentModeScaleToFill;
+    imageView.bounds=CGRectMake(0, 0, 40, 40);
+    
+    [button addSubview:imageView];
+    
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
+    [self imageRotation];
+
+    
+    
+    
+    
+}
+- (void)imageRotation
+{
+    //imageviewAngle += 50;
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionRepeat animations:^{
+        
+        imageView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180));
+        
+    } completion:^(BOOL finished) {
+        
+        [self imageRotation];
+        
+    }];
+
+}
+
 #pragma mark - LazyLoad for _musicArray
 - (NSMutableArray *)musicArray
 {
@@ -46,14 +90,13 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 
 
 #pragma mark - Creating AVPlayer and add it 
-- (void)playerMusic
+- (void)playerMusicIsPlay:(BOOL)isPlay
 {
-    if (self.audioPlayer.status == AVPlayerStatusReadyToPlay) {
+    if (isPlay) {
         
-        
-        
-        
-    }
+        [self setRightBarButtonItem];
+    }else
+        self.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -142,9 +185,9 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     cell.model = model;
     
-    cell.playMusic = ^(AVPlayer *player){
+    cell.playMusic = ^(BOOL isPlaying){
         
-        self.audioPlayer = player;
+        [self playerMusicIsPlay:isPlaying];
     };
     
    //cell.userInteractionEnabled = NO;
@@ -230,15 +273,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    
-    
-    
-    
-    
-}
+
 
 
 

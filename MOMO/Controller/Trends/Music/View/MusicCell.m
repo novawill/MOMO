@@ -8,7 +8,7 @@
 
 #import "MusicCell.h"
 
-
+#import "MusicDetailViewController.h"
 @interface MusicCell()
 
 @property (nonatomic, strong) AVPlayerItem *songItem;
@@ -21,6 +21,26 @@ static BOOL isPlay;
     
     isPlay = NO;
     self.progressView.hidden = YES;
+    
+    [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showDetail)]];
+    
+}
+- (void)showDetail
+{
+    MusicDetailViewController *music = [[MusicDetailViewController alloc] init];
+    
+    self.transModel = ^(Meows *model){
+        
+        music.model = model;
+        
+        
+    };
+    
+    self.transModel(self.model);
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:music animated:YES completion:nil];
+    
+    
     
 }
 
@@ -70,7 +90,7 @@ static BOOL isPlay;
                       forState:UIControlStateNormal];
     
     }
-    self.playMusic(self.audioPlayer);
+    self.playMusic(isPlay);
 }
 - (IBAction)sharAction:(fullPicButton *)sender {
 }
