@@ -72,7 +72,7 @@ static BOOL isPlay;
             
             float current = time.value*1.0f/ time.timescale;
             
-         tProgress.percentage = current / _model.music_duration;
+         tProgress.percentage = current / weakSelf.model.music_duration;
             
             weakSelf.musicDurationLabel.text = [weakSelf formatTime:current];
             

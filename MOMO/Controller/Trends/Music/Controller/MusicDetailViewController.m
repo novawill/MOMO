@@ -7,37 +7,96 @@
 //
 
 #import "MusicDetailViewController.h"
+#import "MusicViewController.h"
 #import <Accelerate/Accelerate.h>
+#import <AVFoundation/AVFoundation.h>
 @interface MusicDetailViewController ()
+
+@property (nonatomic, strong) AVPlayer *audioPlayer;
+
+@property (nonatomic, strong) AVPlayerItem *songItem;
 
 @end
 
 @implementation MusicDetailViewController
-
+{
+    BOOL isPlay;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    isPlay = NO;
+    [self prefersStatusBarHidden];
     [[UIApplication sharedApplication] setStatusBarHidden:TRUE];
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:_model.group.logo_url]
                       placeholderImage:[UIImage imageNamed:@"AppIcon60x60"]];
     
-    [self.backImageView sd_setImageWithURL:[NSURL URLWithString:_model.album_cover.raw] placeholderImage:[UIImage imageNamed:@"WilliamHuang.jpg"]];
+    [self.musicProgress setProgress:0];
     
-    UIImage *image = self.backImageView.image;
+    self.songNameLabel.text = _model.song_name;
     
-//    UIBlurEffect * effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-//    //b.专门用来添加效果的视图
-//    UIVisualEffectView * effectView = [[UIVisualEffectView alloc]initWithEffect:effect];
-//    //设置模糊程度
-//    effectView.alpha = 0.7;
-//    //c.将显示效果的view添加到需要有毛玻璃效果的视图上
+    self.singerLabel.text = _model.artist;
+    
+    self.lyricsLabel.text = _model.lyrics;
+    
+    self.descLabel.text = _model.desc;
+    self.iconAuthorLabel.text = _model.group.name;
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_model.create_time];
+    NSDateFormatter *_formatter=[[NSDateFormatter alloc]init];
+    [_formatter setLocale:[NSLocale currentLocale]];
+    [_formatter setDateFormat:@"yyyy.MM.dd hh:mm"];
+    self.iconDetailLabel.text = [NSString stringWithFormat:@"%@ %ld成员",[_formatter stringFromDate:date],_model.group.member_num];
+    
+    [self.albumImageView sd_setImageWithURL:[NSURL URLWithString:_model.album_cover.raw] placeholderImage:[UIImage imageNamed:@"WilliamHuang"]];
+ 
+    
+
+      //__weak typeof(self) weakSelf = self;
+    //Sets self.backImageView by using Gaussian Blur
+//    SDWebImageManager *manager = [SDWebImageManager sharedManager];
 //    
-//    effectView.frame = self.backImageView.frame;
-//    [self.backImageView addSubview:effectView];
+//
+//    [manager downloadImageWithURL:[NSURL URLWithString:_model.album_cover.raw] options:0
+//                         progress:nil
+//                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//                            if (image) {
+//                                
+//                              self.backImageView.image = [self boxblurImage:image withBlurNumber:0.2];
+//
+//                            }
+//                        }];
     
-   self.backImageView.image = [self boxblurImage:image withBlurNumber:1];
+//Because if I use SDWebImage methods to download wed images and use gaussian blur method to motify them,the output image will be red,somehow.So I use a GCD method to download web image by myself.
+    __block UIImage *img;
+    dispatch_group_t group = dispatch_group_create();
+
+    dispatch_group_async(group,dispatch_get_global_queue(0, 0), ^{
+        
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_model.album_cover.raw]];
+        
+        UIImage *img1 = [UIImage imageWithData:data];
+        
+        img = [self boxblurImage:img1 withBlurNumber:0.2];
+        
+    });
+ 
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        
+        self.backImageView.image = img;
+        
+    });
+
+    
 }
+//Hides StatusBar
+- (BOOL)prefersStatusBarHidden{
+    
+    return YES;
+}
+
+
+//Gaussian Blur Algorithm
 -(UIImage *)boxblurImage:(UIImage *)image withBlurNumber:(CGFloat)blur {
     if (blur < 0.f || blur > 1.f) {
         blur = 0.5f;
@@ -107,14 +166,65 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)musicPlayAction:(fullPicButton *)sender {
+    
+    self.songItem = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:_model.music_url]];
+    self.audioPlayer = [[AVPlayer alloc] initWithPlayerItem:self.songItem];
+    
+    
+    
+    if (! isPlay) {
+        
+        
+        [self.audioPlayer play];
+        isPlay = YES;
+       
+        [self.musicPlayBtn setImage:[UIImage imageNamed:@"btn-musicplay-pause"]
+                      forState:UIControlStateNormal];
+        
+        __weak typeof(self) weakSelf = self;
+        __weak UIProgressView *tProgress = self.musicProgress;
+        [_audioPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 10) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+            
+            float current = time.value*1.0f/ time.timescale;
+            
+            [tProgress setProgress:current / weakSelf.model.music_duration animated:YES];
+
+            weakSelf.musicDurationLabel.text = [[weakSelf formatTime:current] stringByAppendingString:[NSString stringWithFormat:@"/%ld",weakSelf.model.music_duration]];
+            
+        }];
+
+    }else if(isPlay)
+    {
+    
+    [self.audioPlayer pause];
+    
+        [self.musicPlayBtn setImage:[UIImage imageNamed:@"btn-musicplay-play"]
+                  forState:UIControlStateNormal];
+        isPlay = NO;
+    }
+
 }
-*/
+//Formats time
+- (NSString *)formatTime:(float)num{
+    
+    int sec = (int)num % 60;
+    int min = (int)num / 60;
+    if (num < 60) {
+        return [NSString stringWithFormat:@"00:%02.0f",num];
+    }
+    return [NSString stringWithFormat:@"%02d:%02d",min,sec];
+}
+
+#pragma mark - backButton
+- (IBAction)backBtnAction:(fullPicButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+    
+}
+
 
 @end
