@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *checkInImage;
 @property (weak, nonatomic) IBOutlet UILabel *thumbNumber;
 @property (weak, nonatomic) IBOutlet UILabel *commentNumber;
+
 //Model
 @property (nonatomic, strong) Meow_list *model;
 //Actions

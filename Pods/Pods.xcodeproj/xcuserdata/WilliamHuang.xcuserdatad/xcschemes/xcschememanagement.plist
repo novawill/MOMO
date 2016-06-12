@@ -49,7 +49,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,17 +72,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A8661B3A6C59D1C09E5301E436F65B5</key>
+		<key>14ADD879F19AA2F4D583530B9ED17AB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30993FF1F27082C4F151C19205BEF35E</key>
+		<key>19E433DE22AAD76A0546C97750301700</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44976FEE51AE093EB580F9057A29DE91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FA8DDE520047BD717CF4D3A9FA646B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C00FD1857A6F577F2047CA029DB2BA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C1E59D841D7A56AFD1CF5EBE1245D32</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED8D301ED69426110799C71244CCFEE3</key>
+		<key>F7839CB655B53628C13705D6D4B32078</key>
 		<dict>
 			<key>primary</key>
 			<true/>

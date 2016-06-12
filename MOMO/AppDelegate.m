@@ -21,6 +21,8 @@
    
    
     
+    
+    
      UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[BaseViewController alloc] init]];
    LeftViewController *left = [[LeftViewController alloc] init];
     RightViewController *right = [[RightViewController alloc] init];

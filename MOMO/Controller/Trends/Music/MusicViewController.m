@@ -28,6 +28,8 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     [super viewDidLoad];
     self.start = 0;
     [self createView];
+    [self playerMusic];
+    //[self customNavigationItemMethodsImage:[UIImage imageNamed:] target:<#(id)#> selector:<#(SEL)#> isLeft:NO]
     
 }
 #pragma mark - LazyLoad for _musicArray
@@ -44,7 +46,15 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 
 
 #pragma mark - Creating AVPlayer and add it 
-
+- (void)playerMusic
+{
+    if (self.audioPlayer.status == AVPlayerStatusReadyToPlay) {
+        
+        
+        
+        
+    }
+}
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
@@ -117,6 +127,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.musicArray.count;
@@ -131,7 +142,14 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     cell.model = model;
     
-    cell.userInteractionEnabled = NO;
+    cell.playMusic = ^(AVPlayer *player){
+        
+        self.audioPlayer = player;
+    };
+    
+   //cell.userInteractionEnabled = NO;
+    
+    
     
     return cell;
     
@@ -160,16 +178,19 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     
     
-    [self.httpManager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.httpManager GET:url parameters:nil progress:nil
+                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         MusicModel *musicModel = [MusicModel yy_modelWithJSON:responseObject];
         
                                              
         if ([self.musicTableView.mj_footer isHidden]) {
+            
             [self.musicArray removeAllObjects];
         }
         
-        //Adding the parsed data array(i.e meows) to musicArray which is the dataArray for tableView
+        //Adding the parsed data array(i.e meows) to musicArray
+        //which is the dataArray for tableView
         [self.musicArray addObjectsFromArray:musicModel.meows];
         
         __weak typeof(self) weakSelf = self;
@@ -178,8 +199,10 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
+            
             //Refreshing TableView
             [weakSelf.musicTableView reloadData];
+            
             //Updating footer and header status
             [weakSelf.musicTableView.mj_header endRefreshing];
             [weakSelf.musicTableView.mj_header endRefreshing];
@@ -207,7 +230,15 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 }
 
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    
+    
+    
+    
+}
 
 
 

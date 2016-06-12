@@ -36,7 +36,8 @@
 {
     _model = model;
     
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:_model.group.logo_url] placeholderImage:[UIImage imageNamed:@"btn-rec-refresh-active"]];
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:_model.group.logo_url]
+                      placeholderImage:[UIImage imageNamed:@"btn-rec-refresh-active"]];
     
     self.iconLabel.text = _model.group.name;
     
@@ -49,10 +50,8 @@
         self.typeLabel.text = @"#其他";
     }
     
-    
-    
-    
-   [self.backgroundImage sd_setImageWithURL:[NSURL URLWithString:_model.images[0].raw] placeholderImage:[UIImage imageNamed:@"WilliamHuang"]];
+   [self.backgroundImage sd_setImageWithURL:[NSURL URLWithString:_model.images[0].raw]
+                           placeholderImage:[UIImage imageNamed:@"WilliamHuang"]];
     
    self.picNumberLabel.text = [NSString stringWithFormat:@"%ld张图片",_model.image_count];
     

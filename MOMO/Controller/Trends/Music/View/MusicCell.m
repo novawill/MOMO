@@ -7,18 +7,21 @@
 //
 
 #import "MusicCell.h"
-#import <AVFoundation/AVFoundation.h>
+
 
 @interface MusicCell()
 
-@property (nonatomic, strong)  AVPlayer *audioPlayer;
-
+@property (nonatomic, strong) AVPlayerItem *songItem;
 @end
 
 @implementation MusicCell
+static BOOL isPlay;
 
 - (void)awakeFromNib {
-    // Initialization code
+    
+    isPlay = NO;
+    self.progressView.hidden = YES;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -27,19 +30,64 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)playAction:(id)sender {
+- (IBAction)playAction:(fullPicButton *)sender {
+    
+    self.songItem = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:self.urlString]];
+    self.audioPlayer = [[AVPlayer alloc] initWithPlayerItem:self.songItem];
     
     
-    
-    
-}
-- (IBAction)sharAction:(id)sender {
-}
-- (IBAction)thumbAction:(id)sender {
-}
-- (IBAction)commentAction:(id)sender {
-}
+                        
+    if (! isPlay) {
+        
+        
+        [self.audioPlayer play];
+        isPlay = YES;
+        self.progressView.hidden = NO;
+        [self.playBtn setImage:[UIImage imageNamed:@"btn-musicplay-pause"]
+                      forState:UIControlStateNormal];
+        
+       __weak typeof(self) weakSelf = self;
+        __weak CustomProgressView *tProgress = self.progressView;
+        [_audioPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 10) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+            
+            float current = time.value*1.0f/ time.timescale;
+            
+         tProgress.percentage = current / _model.music_duration;
+            
+            weakSelf.musicDurationLabel.text = [weakSelf formatTime:current];
+            
+        }];
 
+        
+        
+    }else if(isPlay)
+    {
+        
+        [self.audioPlayer pause];
+        isPlay = NO;
+        self.progressView.hidden = YES;
+        [self.playBtn setImage:[UIImage imageNamed:@"btn-musicplay-play"]
+                      forState:UIControlStateNormal];
+    
+    }
+    self.playMusic(self.audioPlayer);
+}
+- (IBAction)sharAction:(fullPicButton *)sender {
+}
+- (IBAction)thumbAction:(fullPicButton *)sender {
+}
+- (IBAction)commentAction:(fullPicButton *)sender {
+}
+//Formats time
+- (NSString *)formatTime:(float)num{
+    
+    int sec = (int)num % 60;
+    int min = (int)num / 60;
+    if (num < 60) {
+        return [NSString stringWithFormat:@"00:%02.0f",num];
+    }
+    return [NSString stringWithFormat:@"%02d:%02d",min,sec];
+}
 
 - (void)setModel:(Meows *)model
 {
@@ -59,7 +107,10 @@
         self.typeLabel.text = [NSString stringWithFormat:@"#%@",_model.category.name];
     }else
     {
-        //On account of several tests, some _model.category, which should had be "音乐" in accordance with json file, returned nil value or even had no property of category for uncertain reason, so I let typeLabel.text be "#其它" in that situation.
+        //On account of several tests, some _model.category,
+        //which should had be "音乐" in accordance with json file,
+        //returned nil value or even had no property of category for uncertain reason,
+        //so I let typeLabel.text be "#其它" in that situation.
         self.typeLabel.text = @"#其它";
     }
     
@@ -70,7 +121,8 @@
     
     self.groupName.text = _model.group.name;
     
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:_model.group.logo_url] placeholderImage:[UIImage imageNamed:@"AppIcon60x60"]];
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:_model.group.logo_url]
+                      placeholderImage:[UIImage imageNamed:@"AppIcon60x60"]];
     
     self.commentNumberLabel.text = [NSString stringWithFormat:@"%ld",_model.comment_count];
     
@@ -81,12 +133,15 @@
     NSInteger seconds = musicDurationBySeconds % 60;
     
     
-    NSString *musicDurationStr = [[NSString alloc] initWithFormat:@"%ld:%@",minutes, seconds > 9 ? [NSString stringWithFormat:@"%ld",seconds]: [NSString stringWithFormat:@"0%ld",seconds]];
+    NSString *musicDurationStr = [[NSString alloc] initWithFormat:@"%ld:%@",minutes, seconds > 9 ?
+                                       [NSString stringWithFormat:@"%ld",seconds]:
+                                       [NSString stringWithFormat:@"0%ld",seconds]];
     
     self.musicDurationLabel.text = musicDurationStr;
     
     self.songNameLabel.text = _model.song_name;
     
+    self.urlString = _model.music_url;
 }
 
 

@@ -19,6 +19,8 @@
 #import <UIImageView+WebCache.h>
 #import <KVNProgress.h>
 #import <FMDB.h>
+#import <POP.h>
+#import <TKit.h>
 
 
 #endif /* ThirdParyLibrary_h */

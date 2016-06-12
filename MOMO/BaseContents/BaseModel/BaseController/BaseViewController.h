@@ -11,16 +11,26 @@
 @interface BaseViewController : UIViewController
 
 //Show navigationItem which can perform RESideMenu methods
-- (void)RESideNavigationItemWithLeftTile:(NSString *)leftTile RightTitle:(NSString *)rightTitle isShowRight:(BOOL)show;
+- (void)RESideNavigationItemWithLeftTile:(NSString *)leftTile
+                              RightTitle:(NSString *)rightTitle
+                             isShowRight:(BOOL)show;
 
 //NavigationItem which can perform custom methods
-- (void)customNavigationItemMethodsTitle:(NSString *)title target:(id)target selector:(SEL)action isLeft:(BOOL)isleft;
+- (void)customNavigationItemMethodsTitle:(NSString *)title
+                                  target:(id)target
+                                selector:(SEL)action
+                                  isLeft:(BOOL)isleft;
 
 //NavigationItem which can perform custom methods with Image
-- (void)customNavigationItemMethodsImage:(UIImage *)image target:(id)target selector:(SEL)action isLeft:(BOOL)isleft;
+- (void)customNavigationItemMethodsImage:(UIImage *)image
+                                  target:(id)target
+                                selector:(SEL)action
+                                  isLeft:(BOOL)isleft;
 
 //NavigationItem which can perform RESideMenu methods with Image
-- (void)RESideNavigationItemWithLeftImage:(UIImage *)leftImage RightImage:(UIImage *)rightImage isShowRight:(BOOL)show;
+- (void)RESideNavigationItemWithLeftImage:(UIImage *)leftImage
+                               RightImage:(UIImage *)rightImage
+                              isShowRight:(BOOL)show;
 
 //Custom NavigationItem
 - (void)customNavigationItem;

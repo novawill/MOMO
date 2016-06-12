@@ -12,5 +12,7 @@ target 'MOMO' do
    pod 'SDWebImage'
    pod 'MBProgressHUD' 
    pod 'RESideMenu'
+   pod ‘pop’
+   pod ‘TKit’
 
 end

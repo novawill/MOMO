@@ -135,7 +135,7 @@
     titleLabel.font = [UIFont systemFontOfSize:20];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = title;
-   //Set Navigation Title
+   //Sets Navigation Title
     self.navigationItem.titleView = titleLabel;
 }
 
