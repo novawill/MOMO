@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 #import "LeftViewController.h"
 #import "RightViewController.h"
+#import "MusicViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,11 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-   
-    
-    
-    
-     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[BaseViewController alloc] init]];
+     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MusicViewController alloc] init]];
    LeftViewController *left = [[LeftViewController alloc] init];
     RightViewController *right = [[RightViewController alloc] init];
     RESideMenu *side = [[RESideMenu alloc] initWithContentViewController:navigationController  leftMenuViewController:left rightMenuViewController:right];

@@ -19,6 +19,8 @@
 		261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF8D1CFB399D008DFFBF /* MusicModel.m */; };
 		264E8CA51D0550DC001789AC /* CheckInHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E8CA31D0550DC001789AC /* CheckInHeadCell.m */; };
 		264E8CA61D0550DC001789AC /* CheckInHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 264E8CA41D0550DC001789AC /* CheckInHeadCell.xib */; };
+		265477731D0E423000E106C5 /* AlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265477711D0E423000E106C5 /* AlbumDetailViewController.m */; };
+		265477741D0E423000E106C5 /* AlbumDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265477721D0E423000E106C5 /* AlbumDetailViewController.xib */; };
 		265599EC1CFE758500389A2F /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E01CFE758500389A2F /* BaseTabBarController.m */; };
 		265599ED1CFE758500389A2F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E21CFE758500389A2F /* BaseViewController.m */; };
 		265599EE1CFE758500389A2F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E41CFE758500389A2F /* LeftViewController.m */; };
@@ -88,6 +90,9 @@
 		264E8CA21D0550DC001789AC /* CheckInHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInHeadCell.h; sourceTree = "<group>"; };
 		264E8CA31D0550DC001789AC /* CheckInHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInHeadCell.m; sourceTree = "<group>"; };
 		264E8CA41D0550DC001789AC /* CheckInHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInHeadCell.xib; sourceTree = "<group>"; };
+		265477701D0E423000E106C5 /* AlbumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetailViewController.h; sourceTree = "<group>"; };
+		265477711D0E423000E106C5 /* AlbumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetailViewController.m; sourceTree = "<group>"; };
+		265477721D0E423000E106C5 /* AlbumDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumDetailViewController.xib; sourceTree = "<group>"; };
 		265599DF1CFE758500389A2F /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		265599E01CFE758500389A2F /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		265599E11CFE758500389A2F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -389,6 +394,9 @@
 			children = (
 				26CF12941CFD73A6001E299A /* AlbumViewController.h */,
 				26CF12951CFD73A6001E299A /* AlbumViewController.m */,
+				265477701D0E423000E106C5 /* AlbumDetailViewController.h */,
+				265477711D0E423000E106C5 /* AlbumDetailViewController.m */,
+				265477721D0E423000E106C5 /* AlbumDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -633,6 +641,7 @@
 				26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */,
 				260BE2891CF5E29800DF151B /* LaunchScreen.storyboard in Resources */,
 				264E8CA61D0550DC001789AC /* CheckInHeadCell.xib in Resources */,
+				265477741D0E423000E106C5 /* AlbumDetailViewController.xib in Resources */,
 				2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */,
 				267391821D0C204800C7F60D /* MusicDetailViewController.xib in Resources */,
 				26C76C9B1D0CEE8400EE4D63 /* MusicCell.xib in Resources */,
@@ -728,6 +737,7 @@
 				26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */,
 				261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */,
 				265599EC1CFE758500389A2F /* BaseTabBarController.m in Sources */,
+				265477731D0E423000E106C5 /* AlbumDetailViewController.m in Sources */,
 				26D7E62A1CFFC67E000C1D5B /* CheckInCell.m in Sources */,
 				260BE27E1CF5E29800DF151B /* AppDelegate.m in Sources */,
 				265599EE1CFE758500389A2F /* LeftViewController.m in Sources */,

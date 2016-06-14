@@ -189,7 +189,7 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
     
     cell.model = model;
     
-    cell.userInteractionEnabled = NO;
+   
     
     return cell;
     

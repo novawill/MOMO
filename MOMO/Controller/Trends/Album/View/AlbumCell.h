@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentNumberLabel;
+@property (nonatomic, strong) void (^transModel)(Meows *model);
+
 
 //Model
 @property (nonatomic, strong) Meows *model;
