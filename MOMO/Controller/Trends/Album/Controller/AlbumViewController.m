@@ -132,8 +132,7 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
         url = [albumAPI stringByAppendingString:[NSString stringWithFormat:@"&start=%ld",start]];
     }
    
-   [self.httpManager GET:url parameters:nil progress:nil
-                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+   [self.httpManager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
        
        AlbumModel *model = [AlbumModel yy_modelWithJSON:responseObject];
        

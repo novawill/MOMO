@@ -14,6 +14,16 @@
 		260BE2891CF5E29800DF151B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260BE2871CF5E29800DF151B /* LaunchScreen.storyboard */; };
 		260BE2941CF5E29800DF151B /* MOMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 260BE2931CF5E29800DF151B /* MOMOTests.m */; };
 		260BE29F1CF5E29800DF151B /* MOMOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 260BE29E1CF5E29800DF151B /* MOMOUITests.m */; };
+		261AA0C91D1276A600F4D102 /* headerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 261AA0C81D1276A600F4D102 /* headerView.m */; };
+		261AA0CB1D1276B800F4D102 /* headerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261AA0CA1D1276B800F4D102 /* headerView.xib */; };
+		261AA0F31D1292DE00F4D102 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0F21D1292DE00F4D102 /* SystemConfiguration.framework */; };
+		261AA0F51D12932E00F4D102 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0F41D12932E00F4D102 /* Security.framework */; };
+		261AA0F71D12933E00F4D102 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0F61D12933E00F4D102 /* libiconv.tbd */; };
+		261AA0F91D12934900F4D102 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0F81D12934900F4D102 /* CoreGraphics.framework */; };
+		261AA0FB1D12935400F4D102 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0FA1D12935400F4D102 /* libsqlite3.tbd */; };
+		261AA0FD1D12935E00F4D102 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0FC1D12935E00F4D102 /* CoreTelephony.framework */; };
+		261AA0FF1D12936A00F4D102 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA0FE1D12936A00F4D102 /* libstdc++.tbd */; };
+		261AA1011D12937400F4D102 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 261AA1001D12937400F4D102 /* libz.tbd */; };
 		261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF821CFAFD09008DFFBF /* MusicViewController.m */; };
 		261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF881CFAFD81008DFFBF /* MusicCell.m */; };
 		261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF8D1CFB399D008DFFBF /* MusicModel.m */; };
@@ -32,6 +42,8 @@
 		267391811D0C204800C7F60D /* MusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2673917F1D0C204800C7F60D /* MusicDetailViewController.m */; };
 		267391821D0C204800C7F60D /* MusicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267391801D0C204800C7F60D /* MusicDetailViewController.xib */; };
 		2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2681D9541CF8A4BF009EA988 /* sideBackgoundPic.jpg */; };
+		26B810C61D0F98270080B55E /* AlbumDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B810C41D0F98270080B55E /* AlbumDetailCell.m */; };
+		26B810C71D0F98270080B55E /* AlbumDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B810C51D0F98270080B55E /* AlbumDetailCell.xib */; };
 		26C76C9B1D0CEE8400EE4D63 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C76C9A1D0CEE8400EE4D63 /* MusicCell.xib */; };
 		26C76D151D0D61E400EE4D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C76D141D0D61E400EE4D63 /* Assets.xcassets */; };
 		26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CF11991CFD2608001E299A /* AVFoundation.framework */; };
@@ -81,6 +93,17 @@
 		260BE29A1CF5E29800DF151B /* MOMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		260BE29E1CF5E29800DF151B /* MOMOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOMOUITests.m; sourceTree = "<group>"; };
 		260BE2A01CF5E29800DF151B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		261AA0C71D1276A600F4D102 /* headerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerView.h; sourceTree = "<group>"; };
+		261AA0C81D1276A600F4D102 /* headerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerView.m; sourceTree = "<group>"; };
+		261AA0CA1D1276B800F4D102 /* headerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = headerView.xib; sourceTree = "<group>"; };
+		261AA0F21D1292DE00F4D102 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		261AA0F41D12932E00F4D102 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		261AA0F61D12933E00F4D102 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		261AA0F81D12934900F4D102 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		261AA0FA1D12935400F4D102 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		261AA0FC1D12935E00F4D102 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		261AA0FE1D12936A00F4D102 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		261AA1001D12937400F4D102 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		261DEF811CFAFD09008DFFBF /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicViewController.h; path = ../MusicViewController.h; sourceTree = "<group>"; };
 		261DEF821CFAFD09008DFFBF /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicViewController.m; path = ../MusicViewController.m; sourceTree = "<group>"; };
 		261DEF871CFAFD81008DFFBF /* MusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicCell.h; sourceTree = "<group>"; };
@@ -115,6 +138,9 @@
 		2681D9521CF89F37009EA988 /* MOMOPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MOMOPch.pch; path = ../MOMOPch.pch; sourceTree = "<group>"; };
 		2681D9531CF89FCC009EA988 /* ThirdParyLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThirdParyLibrary.h; path = ../ThirdParyLibrary.h; sourceTree = "<group>"; };
 		2681D9541CF8A4BF009EA988 /* sideBackgoundPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sideBackgoundPic.jpg; sourceTree = "<group>"; };
+		26B810C31D0F98270080B55E /* AlbumDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetailCell.h; sourceTree = "<group>"; };
+		26B810C41D0F98270080B55E /* AlbumDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetailCell.m; sourceTree = "<group>"; };
+		26B810C51D0F98270080B55E /* AlbumDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumDetailCell.xib; sourceTree = "<group>"; };
 		26C76C9A1D0CEE8400EE4D63 /* MusicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		26C76D141D0D61E400EE4D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CF11991CFD2608001E299A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -147,6 +173,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261AA1011D12937400F4D102 /* libz.tbd in Frameworks */,
+				261AA0FF1D12936A00F4D102 /* libstdc++.tbd in Frameworks */,
+				261AA0FD1D12935E00F4D102 /* CoreTelephony.framework in Frameworks */,
+				261AA0FB1D12935400F4D102 /* libsqlite3.tbd in Frameworks */,
+				261AA0F91D12934900F4D102 /* CoreGraphics.framework in Frameworks */,
+				261AA0F71D12933E00F4D102 /* libiconv.tbd in Frameworks */,
+				261AA0F51D12932E00F4D102 /* Security.framework in Frameworks */,
+				261AA0F31D1292DE00F4D102 /* SystemConfiguration.framework in Frameworks */,
 				26CF12B31CFDE15C001E299A /* Reveal.framework in Frameworks */,
 				26CF119A1CFD2608001E299A /* AVFoundation.framework in Frameworks */,
 				C5C1B8AF55D3A0A3CC13C880 /* libPods-MOMO.a in Frameworks */,
@@ -173,6 +207,14 @@
 		145A46C98A928D1462328BB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				261AA1001D12937400F4D102 /* libz.tbd */,
+				261AA0FE1D12936A00F4D102 /* libstdc++.tbd */,
+				261AA0FC1D12935E00F4D102 /* CoreTelephony.framework */,
+				261AA0FA1D12935400F4D102 /* libsqlite3.tbd */,
+				261AA0F81D12934900F4D102 /* CoreGraphics.framework */,
+				261AA0F61D12933E00F4D102 /* libiconv.tbd */,
+				261AA0F41D12932E00F4D102 /* Security.framework */,
+				261AA0F21D1292DE00F4D102 /* SystemConfiguration.framework */,
 				26CF12B21CFDE15C001E299A /* Reveal.framework */,
 				26CF11991CFD2608001E299A /* AVFoundation.framework */,
 				616C6E3368D08F6552DAF67A /* libPods-MOMO.a */,
@@ -376,6 +418,12 @@
 				26CF129B1CFD73CF001E299A /* AlbumCell.h */,
 				26CF129C1CFD73CF001E299A /* AlbumCell.m */,
 				26CF129D1CFD73CF001E299A /* AlbumCell.xib */,
+				26B810C31D0F98270080B55E /* AlbumDetailCell.h */,
+				26B810C41D0F98270080B55E /* AlbumDetailCell.m */,
+				26B810C51D0F98270080B55E /* AlbumDetailCell.xib */,
+				261AA0C71D1276A600F4D102 /* headerView.h */,
+				261AA0C81D1276A600F4D102 /* headerView.m */,
+				261AA0CA1D1276B800F4D102 /* headerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,6 +696,8 @@
 				26D7E62B1CFFC67E000C1D5B /* CheckInCell.xib in Resources */,
 				26C76D151D0D61E400EE4D63 /* Assets.xcassets in Resources */,
 				260BE2841CF5E29800DF151B /* Main.storyboard in Resources */,
+				26B810C71D0F98270080B55E /* AlbumDetailCell.xib in Resources */,
+				261AA0CB1D1276B800F4D102 /* headerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +783,7 @@
 				260BE2811CF5E29800DF151B /* ViewController.m in Sources */,
 				26CF12991CFD73B4001E299A /* AlbumModel.m in Sources */,
 				265599EF1CFE758500389A2F /* RightViewController.m in Sources */,
+				261AA0C91D1276A600F4D102 /* headerView.m in Sources */,
 				264E8CA51D0550DC001789AC /* CheckInHeadCell.m in Sources */,
 				26CF12961CFD73A6001E299A /* AlbumViewController.m in Sources */,
 				261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */,
@@ -743,6 +794,7 @@
 				265599EE1CFE758500389A2F /* LeftViewController.m in Sources */,
 				260BE27B1CF5E29800DF151B /* main.m in Sources */,
 				2673917B1D0BC22A00C7F60D /* CustomProgressView+BaseConfiguration.m in Sources */,
+				26B810C61D0F98270080B55E /* AlbumDetailCell.m in Sources */,
 				26D7E62E1CFFC68E000C1D5B /* CheckInModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -895,6 +947,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MOMO/Resource/ProjectResource/Pic/Frameworks",
+					"$(PROJECT_DIR)/MOMO/BaseContents/Third",
+					Party,
+					Library/UMSocial_Sdk_5.2.1,
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -957,6 +1012,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MOMO/Resource/ProjectResource/Pic/Frameworks",
+					"$(PROJECT_DIR)/MOMO/BaseContents/Third",
+					Party,
+					Library/UMSocial_Sdk_5.2.1,
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

@@ -7,27 +7,56 @@
 //
 
 #import "AlbumDetailViewController.h"
+#import "AlbumDetailCell.h"
+#import "headerView.h"
+@interface AlbumDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@interface AlbumDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *albumTableView;
+
 
 @end
 
-@implementation AlbumDetailViewController
 
+NSString *const AlbumDetailCellIdentifier = @"AlCell";
+@implementation AlbumDetailViewController
+{
+    UILabel *_titleLabel;
+    UILabel *_authorLabel;
+    UILabel *_descLabel;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
    
     [self prefersStatusBarHidden];
     
+   
+    
+    headerView *header = [headerView iniWith];
+    
+    header.height = 200;
+
+    
+    header.titleLabel.text = _model.title;
+    
+    header.descLabel.text = _model.desc;
+
+    header.authorLabel.text = _model.user.name;
+
+    self.albumTableView.estimatedRowHeight = 300;
+    
+    self.albumTableView.tableHeaderView = header;
+    
+    [self.albumTableView registerNib:[UINib nibWithNibName:@"AlbumDetailCell" bundle:nil] forCellReuseIdentifier:AlbumDetailCellIdentifier];
+    
+    
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:_model.group.logo_url] placeholderImage:[UIImage imageNamed:@"WilliamHuang"]];
     
     self.groupNameLabel.text = _model.group.name;
-    self.titleLabel.text = _model.title;
     
-    self.littleTitleLabel.text = _model.desc;
+   
     
-    [self.image sd_setImageWithURL:[NSURL URLWithString:_model.images[0].raw] placeholderImage:[UIImage imageNamed:@"WilliamHuang"]];
-    
+
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_model.create_time];
     NSDateFormatter *_formatter=[[NSDateFormatter alloc]init];
     [_formatter setLocale:[NSLocale currentLocale]];
@@ -38,6 +67,28 @@
     
     
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    
+    return self.model.images.count;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    AlbumDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:AlbumDetailCellIdentifier];
+    
+    cell.imageModel = _model.images[indexPath.row];
+    
+    cell.imageNumberLabel.text = [NSString stringWithFormat:@"%ld/%ld",indexPath.row + 1,_model.images.count];
+    
+    return cell;
+    
+}
+
+
 //Hides StatusBar
 - (BOOL)prefersStatusBarHidden{
     

@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import <Social/Social.h>
 @interface BaseViewController ()
 
 @end

@@ -6,13 +6,13 @@ target 'MOMO' do
    pod 'AFNetworking'
    pod 'YYModel'
    pod 'MJRefresh'
-   pod 'KVNProgress'
+   pod 'KVNProgress’
    pod 'FMDB'
    pod 'Masonry'
    pod 'SDWebImage'
    pod 'MBProgressHUD' 
    pod 'RESideMenu'
-   pod ‘pop’
-   pod ‘TKit’
-
+   pod 'pop'
+   pod 'TKit'
+   pod ‘LeanCloudSocial’
 end

@@ -11,6 +11,7 @@
 #import "LeftViewController.h"
 #import "RightViewController.h"
 #import "MusicViewController.h"
+//#import "UMSocial.h"
 @interface AppDelegate ()
 
 @end
@@ -38,6 +39,10 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+//    [UMSocialData setAppKey:@"57625cb1e0f55a79df003722"];
+    
+    
     
     
     return YES;

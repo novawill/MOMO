@@ -101,18 +101,18 @@
 }
 - (void)buttonPressed:(UIButton *)btn
 {
-    //停止定时器
+    
     [_sphereView timerStop];
     //
     [UIView animateWithDuration:0.3 animations:^{
-        //放大按钮
+      
         btn.transform = CGAffineTransformMakeScale(2., 2.);
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.3 animations:^{
-            //恢复按钮
+           
             btn.transform = CGAffineTransformMakeScale(1.,1.);
         } completion:^(BOOL finished) {
-            //重新启动定时器
+         
             [_sphereView timerStart];
         }];
     }];

@@ -221,8 +221,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     
     
     
-    [self.httpManager GET:url parameters:nil progress:nil
-                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.httpManager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         MusicModel *musicModel = [MusicModel yy_modelWithJSON:responseObject];
         
@@ -271,12 +270,6 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     }];
 
 }
-
-
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LeanCloudSocial.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,17 +77,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14ADD879F19AA2F4D583530B9ED17AB5</key>
+		<key>0E27102D0634770D2DE44A017E02E1EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19E433DE22AAD76A0546C97750301700</key>
+		<key>14578FA4F9458D3D05B563E6F8E5B3A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44976FEE51AE093EB580F9057A29DE91</key>
+		<key>3AB61A8912CC35907C3D1138E235FBD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BE70762D78F5786340A05D9A964E037</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F609263C9440CC2CC9CE404B3B11A4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,22 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FA8DDE520047BD717CF4D3A9FA646B4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8C00FD1857A6F577F2047CA029DB2BA7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7839CB655B53628C13705D6D4B32078</key>
+		<key>A53017FF03D359F082B67848795BBED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDF69CBB316F576EA4926E5CEEC1531C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
