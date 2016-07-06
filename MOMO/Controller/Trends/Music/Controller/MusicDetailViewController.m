@@ -24,7 +24,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+
+
     isPlay = NO;
     [self prefersStatusBarHidden];
     [[UIApplication sharedApplication] setStatusBarHidden:TRUE];
@@ -109,6 +111,7 @@
     }
     int boxSize = (int)(blur * 40);
     boxSize = boxSize - (boxSize % 2) + 1;
+    
     
     CGImageRef img = image.CGImage;
     

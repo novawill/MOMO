@@ -13,14 +13,17 @@ NSString *const AlbumCellIdentifier = @"AlbumCellIdentifier";
 
 @interface AlbumViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray *albumDataArray;
+//@property (nonatomic, strong) NSMutableArray *albumDataArray;
 @property (nonatomic, strong) UITableView *albumTableView;
 @property (nonatomic, assign) NSInteger start;
 
 @end
 
 @implementation AlbumViewController
-
+{
+    NSMutableArray *_albumDataArray;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

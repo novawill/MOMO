@@ -17,7 +17,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
 
 @property (nonatomic, strong) UITableView *musicTableView;
 //Sets an array to populate data requested from the Internet
-@property (nonatomic, strong) NSMutableArray *musicArray;
+//@property (nonatomic, strong) NSMutableArray *musicArray;
 @property (nonatomic, assign) NSUInteger start;//Property of Start
 @property (nonatomic, strong)  AVPlayer *audioPlayer;
 @end
@@ -27,6 +27,7 @@ NSString * const MusicCellIdentifier = @"MusicCellIdentifier";
     UIImageView *imageView;//ImageView for rotation in rightBarbuttonItem when the music is playing
     CGFloat imageviewAngle;
    // BOOL isPlay; //Whether the music is playing
+     NSMutableArray *_musicArray;
 }
 
 - (void)viewDidLoad {

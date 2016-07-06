@@ -11,6 +11,7 @@
 #import "MusicViewController.h"
 #import "AlbumViewController.h"
 #import "CheckInViewController.h"
+#import "UnsignedMeViewController.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -20,8 +21,9 @@
 @implementation LeftViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    [super viewDidLoad];
+   
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, 54 * 5) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -64,7 +66,9 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
 
-        default:
+       case 4:
+            [self.sideMenuViewController setContentViewController:[[UnsignedMeViewController alloc] init] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
             break;
     }
 }
@@ -75,6 +79,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return 54;
 }
 

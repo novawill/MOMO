@@ -27,6 +27,11 @@
 		261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF821CFAFD09008DFFBF /* MusicViewController.m */; };
 		261DEF8A1CFAFD81008DFFBF /* MusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF881CFAFD81008DFFBF /* MusicCell.m */; };
 		261DEF8E1CFB399D008DFFBF /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DEF8D1CFB399D008DFFBF /* MusicModel.m */; };
+		26231E341D139236006FA505 /* UnsignedMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26231E321D139236006FA505 /* UnsignedMeViewController.m */; };
+		26231E351D139236006FA505 /* UnsignedMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26231E331D139236006FA505 /* UnsignedMeViewController.xib */; };
+		26231E401D13AA07006FA505 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26231E3E1D13AA07006FA505 /* SettingCell.m */; };
+		26231E411D13AA07006FA505 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26231E3F1D13AA07006FA505 /* SettingCell.xib */; };
+		26231E461D13E736006FA505 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26231E451D13E736006FA505 /* SettingTableViewController.m */; };
 		264E8CA51D0550DC001789AC /* CheckInHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E8CA31D0550DC001789AC /* CheckInHeadCell.m */; };
 		264E8CA61D0550DC001789AC /* CheckInHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 264E8CA41D0550DC001789AC /* CheckInHeadCell.xib */; };
 		265477731D0E423000E106C5 /* AlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265477711D0E423000E106C5 /* AlbumDetailViewController.m */; };
@@ -37,6 +42,8 @@
 		265599EF1CFE758500389A2F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E61CFE758500389A2F /* RightViewController.m */; };
 		265599F11CFE758500389A2F /* fullPicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599EB1CFE758500389A2F /* fullPicButton.m */; };
 		265599F21CFE766600389A2F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 265599E81CFE758500389A2F /* BaseModel.m */; };
+		265DAB2C1D150583008C2164 /* LoginedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DAB2A1D150583008C2164 /* LoginedVC.m */; };
+		265DAB2D1D150583008C2164 /* LoginedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265DAB2B1D150583008C2164 /* LoginedVC.xib */; };
 		267391781D0BC09F00C7F60D /* CustomProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 267391771D0BC09F00C7F60D /* CustomProgressView.m */; };
 		2673917B1D0BC22A00C7F60D /* CustomProgressView+BaseConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2673917A1D0BC22A00C7F60D /* CustomProgressView+BaseConfiguration.m */; };
 		267391811D0C204800C7F60D /* MusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2673917F1D0C204800C7F60D /* MusicDetailViewController.m */; };
@@ -110,6 +117,14 @@
 		261DEF881CFAFD81008DFFBF /* MusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicCell.m; sourceTree = "<group>"; };
 		261DEF8C1CFB399D008DFFBF /* MusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
 		261DEF8D1CFB399D008DFFBF /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
+		26231E311D139236006FA505 /* UnsignedMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnsignedMeViewController.h; path = ../UnsignedMeViewController.h; sourceTree = "<group>"; };
+		26231E321D139236006FA505 /* UnsignedMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnsignedMeViewController.m; path = ../UnsignedMeViewController.m; sourceTree = "<group>"; };
+		26231E331D139236006FA505 /* UnsignedMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UnsignedMeViewController.xib; path = ../UnsignedMeViewController.xib; sourceTree = "<group>"; };
+		26231E3D1D13AA07006FA505 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		26231E3E1D13AA07006FA505 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		26231E3F1D13AA07006FA505 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		26231E441D13E736006FA505 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		26231E451D13E736006FA505 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		264E8CA21D0550DC001789AC /* CheckInHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInHeadCell.h; sourceTree = "<group>"; };
 		264E8CA31D0550DC001789AC /* CheckInHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInHeadCell.m; sourceTree = "<group>"; };
 		264E8CA41D0550DC001789AC /* CheckInHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInHeadCell.xib; sourceTree = "<group>"; };
@@ -128,6 +143,9 @@
 		265599E81CFE758500389A2F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		265599EA1CFE758500389A2F /* fullPicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fullPicButton.h; sourceTree = "<group>"; };
 		265599EB1CFE758500389A2F /* fullPicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fullPicButton.m; sourceTree = "<group>"; };
+		265DAB291D150583008C2164 /* LoginedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginedVC.h; sourceTree = "<group>"; };
+		265DAB2A1D150583008C2164 /* LoginedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginedVC.m; sourceTree = "<group>"; };
+		265DAB2B1D150583008C2164 /* LoginedVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginedVC.xib; sourceTree = "<group>"; };
 		267391761D0BC09F00C7F60D /* CustomProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgressView.h; sourceTree = "<group>"; };
 		267391771D0BC09F00C7F60D /* CustomProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomProgressView.m; sourceTree = "<group>"; };
 		267391791D0BC22A00C7F60D /* CustomProgressView+BaseConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomProgressView+BaseConfiguration.h"; sourceTree = "<group>"; };
@@ -347,6 +365,31 @@
 			path = "Header Management";
 			sourceTree = "<group>";
 		};
+		26231E361D13A2B6006FA505 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26231E3D1D13AA07006FA505 /* SettingCell.h */,
+				26231E3E1D13AA07006FA505 /* SettingCell.m */,
+				26231E3F1D13AA07006FA505 /* SettingCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26231E371D13A2C1006FA505 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26231E311D139236006FA505 /* UnsignedMeViewController.h */,
+				26231E321D139236006FA505 /* UnsignedMeViewController.m */,
+				26231E331D139236006FA505 /* UnsignedMeViewController.xib */,
+				26231E441D13E736006FA505 /* SettingTableViewController.h */,
+				26231E451D13E736006FA505 /* SettingTableViewController.m */,
+				265DAB291D150583008C2164 /* LoginedVC.h */,
+				265DAB2A1D150583008C2164 /* LoginedVC.m */,
+				265DAB2B1D150583008C2164 /* LoginedVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		265599DC1CFE758500389A2F /* BaseContents */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +589,8 @@
 		26F28A6E1CF7EFDA0024E226 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				26231E371D13A2C1006FA505 /* Controller */,
+				26231E361D13A2B6006FA505 /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -687,11 +732,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CF129F1CFD73CF001E299A /* AlbumCell.xib in Resources */,
+				26231E411D13AA07006FA505 /* SettingCell.xib in Resources */,
 				260BE2891CF5E29800DF151B /* LaunchScreen.storyboard in Resources */,
 				264E8CA61D0550DC001789AC /* CheckInHeadCell.xib in Resources */,
 				265477741D0E423000E106C5 /* AlbumDetailViewController.xib in Resources */,
 				2681D9551CF8A4BF009EA988 /* sideBackgoundPic.jpg in Resources */,
+				26231E351D139236006FA505 /* UnsignedMeViewController.xib in Resources */,
 				267391821D0C204800C7F60D /* MusicDetailViewController.xib in Resources */,
+				265DAB2D1D150583008C2164 /* LoginedVC.xib in Resources */,
 				26C76C9B1D0CEE8400EE4D63 /* MusicCell.xib in Resources */,
 				26D7E62B1CFFC67E000C1D5B /* CheckInCell.xib in Resources */,
 				26C76D151D0D61E400EE4D63 /* Assets.xcassets in Resources */,
@@ -774,6 +822,7 @@
 				265599F21CFE766600389A2F /* BaseModel.m in Sources */,
 				26CF129E1CFD73CF001E299A /* AlbumCell.m in Sources */,
 				267391781D0BC09F00C7F60D /* CustomProgressView.m in Sources */,
+				26231E461D13E736006FA505 /* SettingTableViewController.m in Sources */,
 				26D7E6261CFFC658000C1D5B /* CheckInViewController.m in Sources */,
 				26F5E40C1CFE877B00F28F98 /* XLSphereView.m in Sources */,
 				261DEF831CFAFD09008DFFBF /* MusicViewController.m in Sources */,
@@ -790,11 +839,14 @@
 				265599EC1CFE758500389A2F /* BaseTabBarController.m in Sources */,
 				265477731D0E423000E106C5 /* AlbumDetailViewController.m in Sources */,
 				26D7E62A1CFFC67E000C1D5B /* CheckInCell.m in Sources */,
+				26231E401D13AA07006FA505 /* SettingCell.m in Sources */,
+				265DAB2C1D150583008C2164 /* LoginedVC.m in Sources */,
 				260BE27E1CF5E29800DF151B /* AppDelegate.m in Sources */,
 				265599EE1CFE758500389A2F /* LeftViewController.m in Sources */,
 				260BE27B1CF5E29800DF151B /* main.m in Sources */,
 				2673917B1D0BC22A00C7F60D /* CustomProgressView+BaseConfiguration.m in Sources */,
 				26B810C61D0F98270080B55E /* AlbumDetailCell.m in Sources */,
+				26231E341D139236006FA505 /* UnsignedMeViewController.m in Sources */,
 				26D7E62E1CFFC68E000C1D5B /* CheckInModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
